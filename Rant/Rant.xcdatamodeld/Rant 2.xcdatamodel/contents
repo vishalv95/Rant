@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+    <entity name="Account" representedClassName=".Account" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="account" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="rant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rant" inverseName="account" inverseEntity="Rant" syncable="YES"/>
+    </entity>
+    <entity name="Comment" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ts" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="comment" inverseEntity="Account" syncable="YES"/>
+        <relationship name="rant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rant" inverseName="comment" inverseEntity="Rant" syncable="YES"/>
+    </entity>
+    <entity name="Rant" representedClassName=".Rant" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downvotes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ts" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="upvotes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="rant" inverseEntity="Account" syncable="YES"/>
+        <relationship name="comment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="rant" inverseEntity="Comment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Rant" positionX="-54" positionY="18" width="128" height="165"/>
+        <element name="Comment" positionX="-63" positionY="63" width="128" height="105"/>
+    </elements>
+</model>
