@@ -30,12 +30,12 @@
 		34EBB29C1DC2C5EE00516751 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB2991DC2C5EE00516751 /* Account+CoreDataProperties.swift */; };
 		34EBB29D1DC2C5EE00516751 /* Rant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB29A1DC2C5EE00516751 /* Rant+CoreDataProperties.swift */; };
 		34EBB29E1DC2C5EE00516751 /* Comment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB29B1DC2C5EE00516751 /* Comment+CoreDataProperties.swift */; };
-		34EBB2A41DC2C6A000516751 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB2A31DC2C6A000516751 /* Account.swift */; };
 		34EBB2A61DC2C6B600516751 /* Rant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB2A51DC2C6B600516751 /* Rant.swift */; };
 		34EBB2A81DC2C6CF00516751 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBB2A71DC2C6CF00516751 /* Comment.swift */; };
 		34EE658F1DB9755400B1A76B /* RantTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE658E1DB9755400B1A76B /* RantTabBarController.swift */; };
 		34EE65911DB9769900B1A76B /* HomeFeedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */; };
 		34EE65971DB9838400B1A76B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE65961DB9838400B1A76B /* SettingsViewController.swift */; };
+		7FBF75EE1DC425050044AF6C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF75ED1DC425050044AF6C /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,12 +86,12 @@
 		34EBB2991DC2C5EE00516751 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		34EBB29A1DC2C5EE00516751 /* Rant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		34EBB29B1DC2C5EE00516751 /* Comment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		34EBB2A31DC2C6A000516751 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = ../../.Trash/Account.swift; sourceTree = "<group>"; };
 		34EBB2A51DC2C6B600516751 /* Rant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rant.swift; sourceTree = "<group>"; };
 		34EBB2A71DC2C6CF00516751 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Rant/Comment.swift; sourceTree = "<group>"; };
 		34EE658E1DB9755400B1A76B /* RantTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RantTabBarController.swift; sourceTree = "<group>"; };
 		34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedNavigationController.swift; sourceTree = "<group>"; };
 		34EE65961DB9838400B1A76B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7FBF75ED1DC425050044AF6C /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +122,9 @@
 		341034A61DB6E46000C57A19 = {
 			isa = PBXGroup;
 			children = (
-				34EBB2A31DC2C6A000516751 /* Account.swift */,
 				34EBB2A51DC2C6B600516751 /* Rant.swift */,
 				34EBB2A71DC2C6CF00516751 /* Comment.swift */,
+				7FBF75ED1DC425050044AF6C /* Account.swift */,
 				34EBB2991DC2C5EE00516751 /* Account+CoreDataProperties.swift */,
 				34EBB29A1DC2C5EE00516751 /* Rant+CoreDataProperties.swift */,
 				34EBB29B1DC2C5EE00516751 /* Comment+CoreDataProperties.swift */,
@@ -324,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3410351E1DB850E200C57A19 /* TagAction.swift in Sources */,
-				34EBB2A41DC2C6A000516751 /* Account.swift in Sources */,
 				341034F41DB831A000C57A19 /* CoreDataControls.swift in Sources */,
 				341034F21DB82A9200C57A19 /* ExpandedRantViewController.swift in Sources */,
 				34EBB2981DC2AD6A00516751 /* AddCommentViewController.swift in Sources */,
@@ -343,6 +342,7 @@
 				34EBB2A61DC2C6B600516751 /* Rant.swift in Sources */,
 				34EBB29C1DC2C5EE00516751 /* Account+CoreDataProperties.swift in Sources */,
 				34EBB2A81DC2C6CF00516751 /* Comment.swift in Sources */,
+				7FBF75EE1DC425050044AF6C /* Account.swift in Sources */,
 				34EBB29D1DC2C5EE00516751 /* Rant+CoreDataProperties.swift in Sources */,
 				341034EE1DB70BFE00C57A19 /* Rant.xcdatamodeld in Sources */,
 				341034E51DB6E5D800C57A19 /* HomeFeedTableViewController.swift in Sources */,

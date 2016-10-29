@@ -1,5 +1,5 @@
 //
-//  Account.swift
+//  Comment.swift
 //  Rant
 //
 //  Created by Vishal Vusirikala on 10/19/16.
