@@ -1227,6 +1227,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdQ-mp-qgi">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Log Out">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1271,6 +1272,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJP-gZ-Avl">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Clear Core Data">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1315,6 +1317,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Je-atg">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Clear User Defaults">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1362,6 +1365,7 @@
                     <connections>
                         <outlet property="locationLabel" destination="qo3-A7-XHK" id="0T1-BW-doe"/>
                         <outlet property="usernameLabel" destination="EP5-pg-7b7" id="0G9-NV-xBA"/>
+                        <segue destination="wvq-ZF-NGP" kind="presentation" identifier="logoutSegue" id="rsy-ww-Wp0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-16-M9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1822,8 +1826,9 @@
         <segue reference="oAl-VU-gXQ"/>
         <segue reference="ahE-ON-Uu5"/>
         <segue reference="ZlL-66-d08"/>
-        <segue reference="AvA-aB-SsH"/>
+        <segue reference="rsy-ww-Wp0"/>
         <segue reference="2OY-d8-vBX"/>
+        <segue reference="AvA-aB-SsH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
