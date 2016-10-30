@@ -22,15 +22,21 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
         self.refreshControl?.addTarget(self, action: #selector(HomeFeedTableViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
     }
+
+    override func viewDidAppear(animated: Bool) {
+        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
+        if !isUserLoggedIn {
+            self.performSegueWithIdentifier("loginView", sender: self)
+        }
+        
+    }
     
     func sendTag(tag: String) {
-
-        
         var allRants:[NSManagedObject] = retrieveRants()
         var filteredRants = [NSManagedObject]()
         for i in 0..<(allRants.count){
             let rantTag = allRants[i].valueForKey("tags") as? String
-print(rantTag)
+
             if rantTag == tag{
                 filteredRants.append(allRants[i])
             }
@@ -41,15 +47,7 @@ print(rantTag)
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
-        if !isUserLoggedIn {
-            self.performSegueWithIdentifier("loginView", sender: self)
-        }
-
-    }
-    
-    
+  
     func refresh(sender:AnyObject) {
         rants = retrieveRants()
         self.tableView.reloadData()

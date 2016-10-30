@@ -31,16 +31,13 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
             let defaults = NSUserDefaults.standardUserDefaults()
             let account = retrieveAccountForUser((defaults.objectForKey("username") as? String)!) as! Account
             
-            
             if let rantTag = self.tag {
                 self.storeRant(title, body: body, account: account, tags: rantTag, upvotes: 0, downvotes: 0, ts: NSDate())
             }
             else{
                 self.storeRant(title, body: body, account: account, tags: "Misc", upvotes: 0, downvotes: 0, ts: NSDate())
-                
             }
             self.performSegueWithIdentifier("saveRantSegue", sender: self)
-            
         }))
         
         

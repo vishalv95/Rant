@@ -124,3 +124,21 @@ func retrieveAccountForUser(username:String) -> NSManagedObject {
     }
     return(fetchedResults![0])
 }
+
+func retrieveFavoritesForUser(username:String) -> NSSet {
+    let account = retrieveAccountForUser(username) as! Account
+    let favorites = account.mutableSetValueForKey("rant")
+    return favorites
+
+}
+
+func retrieveFavoritesForThisUser() -> NSSet {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    if let username = defaults.objectForKey("username") as? String{
+        let account = retrieveAccountForUser(username) as! Account
+        return account.favorites!
+    }
+    else{
+     return NSSet()
+    }
+}

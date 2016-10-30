@@ -64,33 +64,47 @@ class ExpandedRantViewController: UIViewController {
             else{
                 sampleComment2.text = ""
             }
-
         }
         else{
             sampleComment1.text = ""
             sampleComment2.text = ""
         }
-        
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func addResponseAction(sender: AnyObject) {
-//        TODO: Choose reponse type alert prompt
+//        TODO: Choose response type alert prompt
         performSegueWithIdentifier("addCommentSegue", sender: self)
         
     }
 
+    @IBAction func favoriteButtonPressed(sender: AnyObject) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let account = retrieveAccountForUser((defaults.objectForKey("username") as? String)!) as! Account
+
+        let favorites = account.mutableSetValueForKey("favorites")
+        favorites.addObject(rant!)
+        
+        // Commit the changes
+        do {
+            try managedContext.save()
+        } catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
