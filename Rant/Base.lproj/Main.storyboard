@@ -1043,7 +1043,7 @@
         <!--Settings-->
         <scene sceneID="BuP-9O-rLP">
             <objects>
-                <tableViewController id="Jhr-fC-LhU" sceneMemberID="viewController">
+                <tableViewController id="Jhr-fC-LhU" customClass="SettingsTableViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="P0A-N6-Yod">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1225,33 +1225,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6c-ph-yMc">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdQ-mp-qgi">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" title="Log Out">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="7" width="384" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="logoutButtonPressed:" destination="Jhr-fC-LhU" eventType="touchUpInside" id="eOE-uW-dT4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="leadingMargin" secondItem="j6c-ph-yMc" secondAttribute="leading" id="AJC-c9-4mm"/>
-                                                <constraint firstItem="j6c-ph-yMc" firstAttribute="centerY" secondItem="38c-jX-Utb" secondAttribute="centerY" id="CyO-5T-gfv"/>
+                                                <constraint firstItem="GdQ-mp-qgi" firstAttribute="centerY" secondItem="38c-jX-Utb" secondAttribute="centerY" id="OqZ-8K-sEj"/>
+                                                <constraint firstItem="GdQ-mp-qgi" firstAttribute="leading" secondItem="38c-jX-Utb" secondAttribute="leadingMargin" constant="7" id="jTA-pY-0cD"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="j6c-ph-yMc"/>
+                                                    <exclude reference="GdQ-mp-qgi"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="AJC-c9-4mm"/>
-                                                    <exclude reference="CyO-5T-gfv"/>
+                                                    <exclude reference="OqZ-8K-sEj"/>
+                                                    <exclude reference="jTA-pY-0cD"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="j6c-ph-yMc"/>
+                                                    <include reference="GdQ-mp-qgi"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="AJC-c9-4mm"/>
-                                                    <include reference="CyO-5T-gfv"/>
+                                                    <include reference="OqZ-8K-sEj"/>
+                                                    <include reference="jTA-pY-0cD"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1263,33 +1269,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Core Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T85-CS-sTB">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJP-gZ-Avl">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" title="Clear Core Data">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="7" width="384" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="clearCoreDataButtonPressed:" destination="Jhr-fC-LhU" eventType="touchUpInside" id="Wcl-Ml-kRO"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="leadingMargin" secondItem="T85-CS-sTB" secondAttribute="leading" id="ZHz-M6-RMe"/>
-                                                <constraint firstItem="T85-CS-sTB" firstAttribute="centerY" secondItem="nJg-Pd-keg" secondAttribute="centerY" id="jzd-jg-Wrw"/>
+                                                <constraint firstItem="pJP-gZ-Avl" firstAttribute="centerY" secondItem="nJg-Pd-keg" secondAttribute="centerY" id="EJE-hg-X2A"/>
+                                                <constraint firstItem="pJP-gZ-Avl" firstAttribute="leading" secondItem="nJg-Pd-keg" secondAttribute="leadingMargin" constant="5" id="SOU-60-seu"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="T85-CS-sTB"/>
+                                                    <exclude reference="pJP-gZ-Avl"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="ZHz-M6-RMe"/>
-                                                    <exclude reference="jzd-jg-Wrw"/>
+                                                    <exclude reference="EJE-hg-X2A"/>
+                                                    <exclude reference="SOU-60-seu"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="T85-CS-sTB"/>
+                                                    <include reference="pJP-gZ-Avl"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="ZHz-M6-RMe"/>
-                                                    <include reference="jzd-jg-Wrw"/>
+                                                    <include reference="EJE-hg-X2A"/>
+                                                    <include reference="SOU-60-seu"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1301,33 +1313,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear User Defaults" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCd-7a-yV1">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Je-atg">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" title="Clear User Defaults">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="7" width="384" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="clearUserDefaultsButtonPressed:" destination="Jhr-fC-LhU" eventType="touchUpInside" id="NcX-F7-bTd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="qCd-7a-yV1" firstAttribute="centerY" secondItem="7do-aE-NV4" secondAttribute="centerY" id="1Jh-Ot-iSz"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="qCd-7a-yV1" secondAttribute="leading" id="EfP-ra-NoD"/>
+                                                <constraint firstItem="dfG-Je-atg" firstAttribute="centerY" secondItem="7do-aE-NV4" secondAttribute="centerY" id="AKc-ha-gw9"/>
+                                                <constraint firstItem="dfG-Je-atg" firstAttribute="leading" secondItem="7do-aE-NV4" secondAttribute="leadingMargin" constant="5" id="yba-X9-4Rz"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="qCd-7a-yV1"/>
+                                                    <exclude reference="dfG-Je-atg"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="1Jh-Ot-iSz"/>
-                                                    <exclude reference="EfP-ra-NoD"/>
+                                                    <exclude reference="AKc-ha-gw9"/>
+                                                    <exclude reference="yba-X9-4Rz"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="qCd-7a-yV1"/>
+                                                    <include reference="dfG-Je-atg"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="1Jh-Ot-iSz"/>
-                                                    <include reference="EfP-ra-NoD"/>
+                                                    <include reference="AKc-ha-gw9"/>
+                                                    <include reference="yba-X9-4Rz"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1341,10 +1359,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="M4Z-NK-ob5"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="qo3-A7-XHK" id="0T1-BW-doe"/>
+                        <outlet property="usernameLabel" destination="EP5-pg-7b7" id="0G9-NV-xBA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-16-M9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.5" y="1199"/>
+            <point key="canvasLocation" x="1759.5" y="1204"/>
         </scene>
         <!--Profile Settings-->
         <scene sceneID="cwF-um-SBE">
@@ -1656,7 +1678,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="logoutPressed:" destination="EgV-Sn-Eqh" eventType="touchUpInside" id="4jk-PK-tZJ"/>
-                                    <segue destination="wvq-ZF-NGP" kind="presentation" identifier="logoutSegue" id="7hK-wO-nYi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1798,12 +1819,11 @@
         <image name="ic_star_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7hK-wO-nYi"/>
-        <segue reference="ZlL-66-d08"/>
-        <segue reference="sVm-Rd-scN"/>
-        <segue reference="ahE-ON-Uu5"/>
         <segue reference="oAl-VU-gXQ"/>
+        <segue reference="ahE-ON-Uu5"/>
+        <segue reference="ZlL-66-d08"/>
         <segue reference="AvA-aB-SsH"/>
+        <segue reference="2OY-d8-vBX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

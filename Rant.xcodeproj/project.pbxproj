@@ -43,8 +43,8 @@
 		7FBF76041DC5C9730044AF6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */; };
 		7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */; };
 		7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */; };
-		7FBF760C1DC5FBC90044AF6C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF760B1DC5FBC90044AF6C /* SettingsTableViewController.swift */; };
 		7FFC543F1DC66A4F00F98F0A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */; };
+		7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,8 +107,8 @@
 		7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
-		7FBF760B1DC5FBC90044AF6C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7FBF75EF1DC4313A0044AF6C /* CoreDataObjects */,
+				7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */,
 				341035191DB8452A00C57A19 /* TagTableViewController.swift */,
 				34EBB2871DC2A20E00516751 /* CommentTableViewController.swift */,
 				341034E41DB6E5D800C57A19 /* HomeFeedTableViewController.swift */,
@@ -176,7 +177,6 @@
 				7FBF75F31DC447560044AF6C /* FavoritesNavigationController.swift */,
 				34EBB2971DC2AD6A00516751 /* AddCommentViewController.swift */,
 				34EE65961DB9838400B1A76B /* SettingsViewController.swift */,
-				7FBF760B1DC5FBC90044AF6C /* SettingsTableViewController.swift */,
 				34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */,
 				34EE658E1DB9755400B1A76B /* RantTabBarController.swift */,
 				3410351F1DB877F100C57A19 /* LoginViewController.swift */,
@@ -371,6 +371,7 @@
 				341034F01DB82A1E00C57A19 /* AddRantViewController.swift in Sources */,
 				341034E91DB6F23100C57A19 /* HomeFeedCell.swift in Sources */,
 				7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */,
+				7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */,
 				7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */,
 				34EE65971DB9838400B1A76B /* SettingsViewController.swift in Sources */,
 				34EE65911DB9769900B1A76B /* HomeFeedNavigationController.swift in Sources */,
@@ -386,7 +387,6 @@
 				34EBB2A81DC2C6CF00516751 /* Comment.swift in Sources */,
 				7FBF75EE1DC425050044AF6C /* Account.swift in Sources */,
 				34EBB29D1DC2C5EE00516751 /* Rant+CoreDataProperties.swift in Sources */,
-				7FBF760C1DC5FBC90044AF6C /* SettingsTableViewController.swift in Sources */,
 				341034E51DB6E5D800C57A19 /* HomeFeedTableViewController.swift in Sources */,
 				7FBF75F21DC433250044AF6C /* Rant.xcdatamodeld in Sources */,
 				341035201DB877F100C57A19 /* LoginViewController.swift in Sources */,

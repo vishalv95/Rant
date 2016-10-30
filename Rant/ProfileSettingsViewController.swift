@@ -19,28 +19,26 @@ class ProfileSettingsViewController: UIViewController {
     @IBAction func saveButtonPressed(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        // Store data
         let user = NSUserDefaults.standardUserDefaults()
     
-        if usernameTextField.text != "" || usernameTextField.text != "New Username"{
-            account?.user = usernameTextField.text!
+        if usernameTextField.text != "" && usernameTextField.text != "New Username"{
+            account?.user = usernameTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             user.setObject(usernameTextField.text!, forKey:"username")
         }
         
-        if cityTextField.text != "" || cityTextField.text != "New City"{
-            account?.city = cityTextField.text!
+        if cityTextField.text != "" && cityTextField.text != "New City"{
+            account?.city = cityTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             user.setObject(cityTextField.text!, forKey:"city")
             
         }
         
-        if stateTextField.text != "" || stateTextField.text != "New State"{
-            account?.state = stateTextField.text!
+        if stateTextField.text != "" && stateTextField.text != "New State"{
+            account?.state = stateTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             user.setObject(stateTextField.text!, forKey: "state")
         }
         
+        // Save changes
         user.synchronize();
-        
-        // Commit the changes
         do {
             try managedContext.save()
         } catch {
