@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrY-TJ-qmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3496.5" y="485"/>
+            <point key="canvasLocation" x="3496.5" y="478"/>
         </scene>
         <!--Tag Table View Controller-->
         <scene sceneID="6Fq-VI-CEh">
@@ -790,12 +790,15 @@
             <objects>
                 <tableViewController id="fcN-e6-SqJ" customClass="FavoritesTableViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="5aP-Fh-MMr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteFeedCell" rowHeight="75" id="Y6F-05-GfE" customClass="FavoriteTableCell" customModule="Rant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y6F-05-GfE" id="bT6-Lz-LrA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-oe-z4B">
@@ -844,6 +847,7 @@
                                     <outlet property="scoreLabel" destination="xbQ-oe-z4B" id="wck-PG-FdO"/>
                                     <outlet property="titleLabel" destination="vGL-Tw-jID" id="PoB-8z-k9a"/>
                                     <outlet property="usernameLabel" destination="5jK-vu-CIP" id="OGB-Qq-U1a"/>
+                                    <segue destination="Bew-Jr-t37" kind="show" identifier="favExpandRantSegue" id="Xd7-WD-sMm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1047,8 +1051,9 @@
         <image name="ic_star_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="oAl-VU-gXQ"/>
         <segue reference="ZeR-hd-3FZ"/>
-        <segue reference="Xkb-T0-Qjb"/>
+        <segue reference="Xd7-WD-sMm"/>
         <segue reference="0Wv-U9-lcq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

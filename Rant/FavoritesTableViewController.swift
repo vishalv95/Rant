@@ -45,4 +45,15 @@ class FavoritesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "favExpandRantSegue",
+            let index = tableView.indexPathForSelectedRow?.row,
+            let ervc = segue.destinationViewController as? ExpandedRantViewController
+        {
+            let rantsArray = Array(rants)
+            ervc.rant = rantsArray[index] as? NSManagedObject
+        }
+        
+    }
 }
