@@ -39,6 +39,9 @@
 		7FBF75F41DC447560044AF6C /* FavoritesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF75F31DC447560044AF6C /* FavoritesNavigationController.swift */; };
 		7FBF75F61DC447DA0044AF6C /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */; };
 		7FBF75FE1DC570480044AF6C /* FavoriteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF75FD1DC570480044AF6C /* FavoriteTableCell.swift */; };
+		7FBF76001DC5C7AA0044AF6C /* ProfileFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF75FF1DC5C7AA0044AF6C /* ProfileFeedCell.swift */; };
+		7FBF76041DC5C9730044AF6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */; };
+		7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		7FBF75F31DC447560044AF6C /* FavoritesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesNavigationController.swift; sourceTree = "<group>"; };
 		7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		7FBF75FD1DC570480044AF6C /* FavoriteTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableCell.swift; sourceTree = "<group>"; };
+		7FBF75FF1DC5C7AA0044AF6C /* ProfileFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFeedCell.swift; sourceTree = "<group>"; };
+		7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +159,10 @@
 				34EBB2891DC2A22000516751 /* CommentTableViewCell.swift */,
 				341034E41DB6E5D800C57A19 /* HomeFeedTableViewController.swift */,
 				3410351B1DB845A800C57A19 /* TagCell.swift */,
+				7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */,
 				341034B21DB6E46000C57A19 /* AppDelegate.swift */,
 				341034B81DB6E46000C57A19 /* Main.storyboard */,
+				7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */,
 				7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */,
 				7FBF75FD1DC570480044AF6C /* FavoriteTableCell.swift */,
 				7FBF75F31DC447560044AF6C /* FavoritesNavigationController.swift */,
@@ -167,6 +175,7 @@
 				3410351D1DB850E200C57A19 /* TagAction.swift */,
 				341034F31DB831A000C57A19 /* CoreDataControls.swift */,
 				341034EF1DB82A1E00C57A19 /* AddRantViewController.swift */,
+				7FBF75FF1DC5C7AA0044AF6C /* ProfileFeedCell.swift */,
 				341034F11DB82A9200C57A19 /* ExpandedRantViewController.swift */,
 				341034E81DB6F23100C57A19 /* HomeFeedCell.swift */,
 				341034BB1DB6E46000C57A19 /* Assets.xcassets */,
@@ -340,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3410351E1DB850E200C57A19 /* TagAction.swift in Sources */,
+				7FBF76001DC5C7AA0044AF6C /* ProfileFeedCell.swift in Sources */,
 				7FBF75F61DC447DA0044AF6C /* FavoritesTableViewController.swift in Sources */,
 				341034F41DB831A000C57A19 /* CoreDataControls.swift in Sources */,
 				341034F21DB82A9200C57A19 /* ExpandedRantViewController.swift in Sources */,
@@ -350,12 +360,14 @@
 				34EBB28A1DC2A22000516751 /* CommentTableViewCell.swift in Sources */,
 				341034F01DB82A1E00C57A19 /* AddRantViewController.swift in Sources */,
 				341034E91DB6F23100C57A19 /* HomeFeedCell.swift in Sources */,
+				7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */,
 				34EE65971DB9838400B1A76B /* SettingsViewController.swift in Sources */,
 				34EE65911DB9769900B1A76B /* HomeFeedNavigationController.swift in Sources */,
 				7FBF75FE1DC570480044AF6C /* FavoriteTableCell.swift in Sources */,
 				34EBB2881DC2A20E00516751 /* CommentTableViewController.swift in Sources */,
 				34EBB29E1DC2C5EE00516751 /* Comment+CoreDataProperties.swift in Sources */,
 				7FBF75F41DC447560044AF6C /* FavoritesNavigationController.swift in Sources */,
+				7FBF76041DC5C9730044AF6C /* ProfileNavigationController.swift in Sources */,
 				3410351C1DB845A800C57A19 /* TagCell.swift in Sources */,
 				341034B31DB6E46000C57A19 /* AppDelegate.swift in Sources */,
 				34EBB2A61DC2C6B600516751 /* Rant.swift in Sources */,

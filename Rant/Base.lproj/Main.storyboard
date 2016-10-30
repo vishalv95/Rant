@@ -22,6 +22,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-86-zeN">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" image="ic_keyboard_arrow_down"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="44" width="34" height="30"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="downVoteButtonPressed:" destination="LSx-kZ-SJh" eventType="touchUpInside" id="5bL-Lh-Srk"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi8-Xb-pVG">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -48,16 +58,6 @@
                                                 <rect key="frame" x="8" y="26" width="43" height="21"/>
                                             </variation>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-86-zeN">
-                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                            <state key="normal" image="ic_keyboard_arrow_down"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="12" y="44" width="34" height="30"/>
-                                            </variation>
-                                            <connections>
-                                                <action selector="downVoteButtonPressed:" destination="LSx-kZ-SJh" eventType="touchUpInside" id="5bL-Lh-Srk"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-D0-bkQ">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                             <state key="normal" image="ic_keyboard_arrow_up"/>
@@ -71,19 +71,19 @@
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
+                                            <exclude reference="zPf-86-zeN"/>
                                             <exclude reference="yi8-Xb-pVG"/>
                                             <exclude reference="WMz-1Q-oZW"/>
                                             <exclude reference="hAx-1W-SAV"/>
-                                            <exclude reference="zPf-86-zeN"/>
                                             <exclude reference="pu7-D0-bkQ"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
+                                            <include reference="zPf-86-zeN"/>
                                             <include reference="yi8-Xb-pVG"/>
                                             <include reference="WMz-1Q-oZW"/>
                                             <include reference="hAx-1W-SAV"/>
-                                            <include reference="zPf-86-zeN"/>
                                             <include reference="pu7-D0-bkQ"/>
                                         </mask>
                                     </variation>
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrY-TJ-qmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3496.5" y="485"/>
+            <point key="canvasLocation" x="3496.5" y="478"/>
         </scene>
         <!--Tag Table View Controller-->
         <scene sceneID="6Fq-VI-CEh">
@@ -824,7 +824,7 @@
                     <connections>
                         <segue destination="gYr-Tg-SX9" kind="relationship" relationship="viewControllers" id="lhA-3x-IRC"/>
                         <segue destination="DjV-UU-KKs" kind="relationship" relationship="viewControllers" id="EkK-Xn-YJR"/>
-                        <segue destination="M7I-KD-3xm" kind="relationship" relationship="viewControllers" id="cKP-bN-AS1"/>
+                        <segue destination="0Sw-QR-gq9" kind="relationship" relationship="viewControllers" id="U9k-Hi-SW7"/>
                         <segue destination="EgV-Sn-Eqh" kind="relationship" relationship="viewControllers" id="ANo-VZ-AGO"/>
                     </connections>
                 </tabBarController>
@@ -833,9 +833,26 @@
             <point key="canvasLocation" x="1759.5" y="-296"/>
         </scene>
         <!--Profile-->
+        <scene sceneID="lEQ-5b-hZK">
+            <objects>
+                <navigationController id="0Sw-QR-gq9" customClass="ProfileNavigationController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_account_circle_white" id="FBl-rj-Gdw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bnH-a7-EFB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M7I-KD-3xm" kind="relationship" relationship="rootViewController" id="O2x-jZ-BoG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4k-Zd-wHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.5" y="1199"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="w5G-rS-fhT">
             <objects>
-                <viewController id="M7I-KD-3xm" sceneMemberID="viewController">
+                <viewController id="M7I-KD-3xm" customClass="ProfileViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bwS-Wi-Jd7"/>
                         <viewControllerLayoutGuide type="bottom" id="nwG-Qf-6iW"/>
@@ -843,13 +860,162 @@
                     <view key="view" contentMode="scaleToFill" id="Xck-WV-QA0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FzQ-PB-YRS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="72" width="47" height="47"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GuS-av-beA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="155" width="47" height="47"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-YA-6gs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="308" y="72" width="47" height="47"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-XD-pEV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="308" y="155" width="47" height="47"/>
+                                </variation>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-XV-txD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileRantCellIdentifier" rowHeight="80" id="VP2-4r-OrK" customClass="ProfileFeedCell" customModule="Rant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VP2-4r-OrK" id="Kgp-l4-1Zn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-dg-RDA">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="5" y="25" width="43" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vn-u4-ueh">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" image="ic_keyboard_arrow_down"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="45" width="34" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="downVoteButtonPressed:" destination="VP2-4r-OrK" eventType="touchUpInside" id="N9a-f8-aQf"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpF-9R-65b">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" image="ic_keyboard_arrow_up"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="0.0" width="34" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="upVoteButtonPressed:" destination="VP2-4r-OrK" eventType="touchUpInside" id="99M-BC-phj"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-Sx-c3i">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="67" y="45" width="333" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFC-FY-vD7">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="67" y="8" width="294" height="32"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Aae-dg-RDA"/>
+                                                    <exclude reference="6Vn-u4-ueh"/>
+                                                    <exclude reference="PpF-9R-65b"/>
+                                                    <exclude reference="2vf-Sx-c3i"/>
+                                                    <exclude reference="iFC-FY-vD7"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Aae-dg-RDA"/>
+                                                    <include reference="6Vn-u4-ueh"/>
+                                                    <include reference="PpF-9R-65b"/>
+                                                    <include reference="2vf-Sx-c3i"/>
+                                                    <include reference="iFC-FY-vD7"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="downVoteButton" destination="6Vn-u4-ueh" id="G16-so-G1q"/>
+                                            <outlet property="scoreLabel" destination="Aae-dg-RDA" id="nNz-9U-fsu"/>
+                                            <outlet property="titleLabel" destination="iFC-FY-vD7" id="gii-fK-My4"/>
+                                            <outlet property="upVoteButton" destination="PpF-9R-65b" id="gCe-pE-nx0"/>
+                                            <outlet property="usernameLabel" destination="2vf-Sx-c3i" id="lgW-N1-dHf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="236" width="400" height="315"/>
+                                </variation>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-8C-V9T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="72" width="130" height="130"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FzQ-PB-YRS"/>
+                                <exclude reference="GuS-av-beA"/>
+                                <exclude reference="9Ab-YA-6gs"/>
+                                <exclude reference="Mmt-XD-pEV"/>
+                                <exclude reference="cPC-XV-txD"/>
+                                <exclude reference="H6b-8C-V9T"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FzQ-PB-YRS"/>
+                                <include reference="GuS-av-beA"/>
+                                <include reference="9Ab-YA-6gs"/>
+                                <include reference="Mmt-XD-pEV"/>
+                                <include reference="cPC-XV-txD"/>
+                                <include reference="H6b-8C-V9T"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_account_circle_white" id="WaU-fN-hXW"/>
+                    <navigationItem key="navigationItem" title="Profile" id="EM5-oO-BTi"/>
+                    <connections>
+                        <outlet property="badge1" destination="FzQ-PB-YRS" id="UKr-gv-7tz"/>
+                        <outlet property="badge3" destination="9Ab-YA-6gs" id="mdh-fD-Dch"/>
+                        <outlet property="badge4" destination="Mmt-XD-pEV" id="zOq-Xu-HDH"/>
+                        <outlet property="profileImage" destination="H6b-8C-V9T" id="EAn-XT-LoD"/>
+                        <outlet property="tableView" destination="cPC-XV-txD" id="vjl-lK-EmT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggs-Xj-BDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.5" y="1199"/>
+            <point key="canvasLocation" x="942" y="1199"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="js0-AH-HAx">
@@ -1158,11 +1324,11 @@
         <image name="ic_star_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ahE-ON-Uu5"/>
+        <segue reference="Xd7-WD-sMm"/>
         <segue reference="ZeR-hd-3FZ"/>
+        <segue reference="ahE-ON-Uu5"/>
         <segue reference="0Wv-U9-lcq"/>
-        <segue reference="Xkb-T0-Qjb"/>
-        <segue reference="JLf-py-dPf"/>
+        <segue reference="oAl-VU-gXQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

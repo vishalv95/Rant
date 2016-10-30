@@ -54,7 +54,6 @@ class ExpandedRantViewController: UIViewController {
                 sampleComment1.text = ""
             }
             
-           
             if comments.count > 1 {
                 let comment2 = commentsArray[1]
                 guard let user2 = comment2.account?.user! else { return }
