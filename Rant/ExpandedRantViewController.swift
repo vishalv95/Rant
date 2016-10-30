@@ -45,9 +45,9 @@ class ExpandedRantViewController: UIViewController {
             commentsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
             
             if comments.count > 0 {
-                let comment1 = commentsArray[0] as? Comment
-                guard let user1 = comment1?.account?.user! else { return }
-                guard let body1 = comment1?.body! else { return }
+                let comment1 = commentsArray[0]
+                guard let user1 = comment1.account?.user! else { return }
+                guard let body1 = comment1.body else { return }
                 sampleComment1.text = "\(user1): \(body1)"
             }
             else{
@@ -56,9 +56,9 @@ class ExpandedRantViewController: UIViewController {
             
            
             if comments.count > 1 {
-                let comment2 = commentsArray[1] as? Comment
-                guard let user2 = comment2?.account?.user! else { return }
-                guard let body2 = comment2?.body! else { return }
+                let comment2 = commentsArray[1]
+                guard let user2 = comment2.account?.user! else { return }
+                guard let body2 = comment2.body else { return }
                 sampleComment2.text = "\(user2): \(body2)"
             }
             else{
