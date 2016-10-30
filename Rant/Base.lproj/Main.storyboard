@@ -152,6 +152,15 @@
                                     <rect key="frame" x="119" y="70" width="207" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="70" width="38" height="21"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-aa-DgT">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -266,20 +275,12 @@
                                     <action selector="upVoteButtonPressed:" destination="Bew-Jr-t37" eventType="touchUpInside" id="9Nu-XN-3Vs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="70" width="38" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="yTk-1Q-TKQ"/>
+                                <exclude reference="PNN-nb-sFh"/>
                                 <exclude reference="Bbm-aa-DgT"/>
                                 <exclude reference="EuS-pR-rgT"/>
                                 <exclude reference="erJ-WN-bAt"/>
@@ -292,12 +293,12 @@
                                 <exclude reference="IVh-R9-79d"/>
                                 <exclude reference="YaY-Tz-1L4"/>
                                 <exclude reference="kGR-71-VPI"/>
-                                <exclude reference="PNN-nb-sFh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="yTk-1Q-TKQ"/>
+                                <include reference="PNN-nb-sFh"/>
                                 <include reference="Bbm-aa-DgT"/>
                                 <include reference="EuS-pR-rgT"/>
                                 <include reference="erJ-WN-bAt"/>
@@ -310,7 +311,6 @@
                                 <include reference="IVh-R9-79d"/>
                                 <include reference="YaY-Tz-1L4"/>
                                 <include reference="kGR-71-VPI"/>
-                                <include reference="PNN-nb-sFh"/>
                             </mask>
                         </variation>
                     </view>
@@ -340,6 +340,7 @@
                         <outlet property="upVoteButton" destination="kGR-71-VPI" id="Mv5-Tl-Qh7"/>
                         <outlet property="usernameLabel" destination="yTk-1Q-TKQ" id="bjs-hP-yjf"/>
                         <segue destination="tGH-Tk-6t0" kind="presentation" identifier="addCommentSegue" id="r90-fs-L2K"/>
+                        <segue destination="P4G-Nv-sYW" kind="presentation" identifier="editRantSegue" id="rOG-FE-IUo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aV-bM-it2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -412,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="5104.5" y="-296"/>
         </scene>
-        <!--Add Rant View Controller-->
+        <!--Title-->
         <scene sceneID="SGN-t8-Gx0">
             <objects>
                 <viewController id="P4G-Nv-sYW" customClass="AddRantViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
@@ -480,6 +481,15 @@
                                     <action selector="cancelButtonPressed:" destination="P4G-Nv-sYW" eventType="touchUpInside" id="kDp-Co-lbV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose Rant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b28-nf-ET4">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="24" width="113" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -489,6 +499,7 @@
                                 <exclude reference="Orx-4N-XnT"/>
                                 <exclude reference="aVi-bW-iyJ"/>
                                 <exclude reference="pma-62-MZT"/>
+                                <exclude reference="b28-nf-ET4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -498,18 +509,21 @@
                                 <include reference="Orx-4N-XnT"/>
                                 <include reference="aVi-bW-iyJ"/>
                                 <include reference="pma-62-MZT"/>
+                                <include reference="b28-nf-ET4"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="kbZ-FG-WmX"/>
                     <connections>
                         <outlet property="bodyTextField" destination="aVi-bW-iyJ" id="X56-lJ-P5S"/>
+                        <outlet property="headerLabel" destination="b28-nf-ET4" id="aR3-06-uYW"/>
                         <outlet property="titleTextField" destination="Pk2-6b-pyX" id="DEf-B1-I0l"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="saveRantSegue" id="ZeR-hd-3FZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrY-TJ-qmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3496.5" y="478"/>
+            <point key="canvasLocation" x="3496.5" y="485"/>
         </scene>
         <!--Tag Table View Controller-->
         <scene sceneID="6Fq-VI-CEh">
@@ -1095,6 +1109,15 @@
                                     <rect key="frame" x="20" y="67" width="363" height="204"/>
                                 </variation>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-mZ-IY6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="124" y="24" width="153" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1102,6 +1125,7 @@
                                 <exclude reference="Qkt-eW-TOd"/>
                                 <exclude reference="axS-ZH-CDU"/>
                                 <exclude reference="ri1-mX-asc"/>
+                                <exclude reference="3Qt-mZ-IY6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1109,6 +1133,7 @@
                                 <include reference="Qkt-eW-TOd"/>
                                 <include reference="axS-ZH-CDU"/>
                                 <include reference="ri1-mX-asc"/>
+                                <include reference="3Qt-mZ-IY6"/>
                             </mask>
                         </variation>
                     </view>
@@ -1133,10 +1158,11 @@
         <image name="ic_star_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oAl-VU-gXQ"/>
+        <segue reference="ahE-ON-Uu5"/>
         <segue reference="ZeR-hd-3FZ"/>
-        <segue reference="Xd7-WD-sMm"/>
         <segue reference="0Wv-U9-lcq"/>
+        <segue reference="Xkb-T0-Qjb"/>
+        <segue reference="JLf-py-dPf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

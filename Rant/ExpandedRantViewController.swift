@@ -80,8 +80,32 @@ class ExpandedRantViewController: UIViewController {
     }
     
     @IBAction func addResponseAction(sender: AnyObject) {
-//        TODO: Choose response type alert prompt
-        performSegueWithIdentifier("addCommentSegue", sender: self)
+
+        // create the alert
+        let alert = UIAlertController(title: "Compose", message: "Which type of response do you want to make?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        // add the actions (buttons)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let username = defaults.objectForKey("username") as? String
+
+        if rant?.account?.user == username {
+            alert.addAction(UIAlertAction(title: "Edit my Rant", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+                self.performSegueWithIdentifier("editRantSegue", sender: self)
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "Comment", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+            self.performSegueWithIdentifier("addCommentSegue", sender: self)
+        }))
+        
+//        alert.addAction(UIAlertAction(title: "Solution", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action: UIAlertAction!) in
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }))
+
+        
+        // show the alert
+        presentViewController(alert, animated: true, completion: nil)
+        
         
     }
     
@@ -104,8 +128,6 @@ class ExpandedRantViewController: UIViewController {
         self.upVoteButton.enabled = true
         self.downVoteButton.enabled = false
     }
-
-    
     
 
     @IBAction func favoriteButtonPressed(sender: AnyObject) {
@@ -141,6 +163,17 @@ class ExpandedRantViewController: UIViewController {
             let acvc = segue.destinationViewController as? AddCommentViewController{
             acvc.rant = rant
         }
+        
+        
+        if segue.identifier == "editRantSegue",
+            let arvc = segue.destinationViewController as? AddRantViewController{
+            
+            arvc.header = "Edit Rant"
+            arvc.titleText = titleLabel.text
+            arvc.body = bodyLabel.text
+            arvc.editRant = rant
+        }
+        
         
         
         

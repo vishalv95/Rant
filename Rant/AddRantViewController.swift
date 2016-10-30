@@ -12,13 +12,18 @@ import CoreData
 
 class AddRantViewController: UIViewController, UIPopoverPresentationControllerDelegate, TagAction, UITextViewDelegate {
 
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextField: UITextView!
-
+    
     @IBAction func cancelButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    var editRant:Rant?
+    var header:String?
+    var titleText:String?
+    var body:String?
     var tag:String?
     
     @IBAction func saveAction(sender: AnyObject) {
@@ -31,8 +36,9 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
             let defaults = NSUserDefaults.standardUserDefaults()
             let account = retrieveAccountForUser((defaults.objectForKey("username") as? String)!) as! Account
             
+            
             if let rantTag = self.tag {
-                self.storeRant(title, body: body, account: account, tags: rantTag, upvotes: 0, downvotes: 0, ts: NSDate())
+                self.storeRant(title, body: body, account: account, tags: rantTag, upvotes: 0 , downvotes: 0, ts: NSDate())
             }
             else{
                 self.storeRant(title, body: body, account: account, tags: "Misc", upvotes: 0, downvotes: 0, ts: NSDate())
@@ -41,7 +47,7 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
         }))
         
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
             alert.dismissViewControllerAnimated(true, completion: nil)
         }))
         presentViewController(alert, animated: true, completion: nil)
@@ -68,6 +74,20 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
         self.bodyTextField.text = "Rant Here..."
         self.bodyTextField.textColor = UIColor.lightGrayColor()
         
+        
+        if let headerString = header{
+            if let titleTextString = titleText{
+                if let bodyString = body{
+                    headerLabel.text = headerString
+                    titleTextField.text = titleTextString
+                    bodyTextField.text = bodyString
+                    titleTextField.textColor = UIColor.blackColor()
+                    bodyTextField.textColor = UIColor.blackColor()
+                }
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,22 +100,30 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
-        // Create the entity we want to save
-        let entity =  NSEntityDescription.entityForName("Rant", inManagedObjectContext: managedContext)
-        let rant = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        if let rant = editRant {
+            rant.setValue(title, forKey: "title")
+            rant.setValue(body, forKey: "body")
+        }
+        else{
+            // Create the entity we want to save
+            let entity =  NSEntityDescription.entityForName("Rant", inManagedObjectContext: managedContext)
+            let rant = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+            
+            // Set the attribute values
+            rant.setValue(title, forKey: "title")
+            rant.setValue(body, forKey: "body")
+            rant.setValue(account, forKey: "account")
+            rant.setValue(tags, forKey: "tags")
+            rant.setValue(Int(upvotes), forKey: "upvotes")
+            rant.setValue(Int(downvotes), forKey: "downvotes")
+            rant.setValue(ts, forKey: "ts")
+            
+            // Add rants to the account
+            let rants = account.mutableSetValueForKey("rant")
+            rants.addObject(rant)
+        }
         
-        // Set the attribute values
-        rant.setValue(title, forKey: "title")
-        rant.setValue(body, forKey: "body")
-        rant.setValue(account, forKey: "account")
-        rant.setValue(tags, forKey: "tags")
-        rant.setValue(Int(upvotes), forKey: "upvotes")
-        rant.setValue(Int(downvotes), forKey: "downvotes")
-        rant.setValue(ts, forKey: "ts")
-        
-        // Add rants to the account
-        let rants = account.mutableSetValueForKey("rant")
-        rants.addObject(rant)
+
 
         // Commit the changes
         do {
@@ -116,6 +144,12 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
     
     
     func textViewDidBeginEditing(textView: UITextView) {
+//        if titleTextField.textColor == UIColor.lightGrayColor() {
+//            titleTextField.text = nil
+//            titleTextField.textColor = UIColor.blackColor()
+//        }
+        
+        
         if bodyTextField.textColor == UIColor.lightGrayColor() {
             bodyTextField.text = nil
             bodyTextField.textColor = UIColor.blackColor()
@@ -123,6 +157,11 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
     }
     
     func textViewDidEndEditing(textView: UITextView) {
+//        if titleTextField.text!.isEmpty {
+//            titleTextField.text = "Title"
+//            titleTextField.textColor = UIColor.lightGrayColor()
+//        }
+        
         if bodyTextField.text.isEmpty {
             bodyTextField.text = "Rant Here..."
             bodyTextField.textColor = UIColor.lightGrayColor()

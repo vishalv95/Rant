@@ -87,7 +87,6 @@ func retrieveComments() -> [NSManagedObject] {
 func retrieveCommentsFromRant(rantID:NSManagedObjectID) -> [NSManagedObject] {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let managedContext = appDelegate.managedObjectContext
-    
 
     let fetchRequest = NSFetchRequest(entityName:"Comment")
     var fetchedResults:[NSManagedObject]? = nil

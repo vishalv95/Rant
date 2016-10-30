@@ -66,7 +66,7 @@ class AddCommentViewController: UIViewController, UITextViewDelegate {
         }))
         
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
             alert.dismissViewControllerAnimated(true, completion: nil)
         }))
         presentViewController(alert, animated: true, completion: nil)
