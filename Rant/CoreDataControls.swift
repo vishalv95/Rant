@@ -40,7 +40,7 @@ func clearRantCoreData() {
     
 }
 
-func retrieveRants() -> [NSManagedObject] {
+func retrieveRants() -> [Rant] {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let managedContext = appDelegate.managedObjectContext
     
@@ -49,6 +49,9 @@ func retrieveRants() -> [NSManagedObject] {
     
     do {
         try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        var rants = fetchedResults as! [Rant]
+        rants.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
+        return rants
     } catch {
         // If an error occurs
         let nserror = error as NSError
@@ -56,7 +59,7 @@ func retrieveRants() -> [NSManagedObject] {
         abort()
     }
     
-    return(fetchedResults)!
+    return [Rant]()
     
 }
 
@@ -125,20 +128,18 @@ func retrieveAccountForUser(username:String) -> NSManagedObject {
     return(fetchedResults![0])
 }
 
-func retrieveFavoritesForUser(username:String) -> NSSet {
-    let account = retrieveAccountForUser(username) as! Account
-    let favorites = account.mutableSetValueForKey("rant")
-    return favorites
 
-}
-
-func retrieveFavoritesForThisUser() -> NSSet {
+func retrieveFavoritesForThisUser() -> [Rant] {
     let defaults = NSUserDefaults.standardUserDefaults()
     if let username = defaults.objectForKey("username") as? String{
         let account = retrieveAccountForUser(username) as! Account
-        return account.favorites!
+        
+        var rantsArray:[Rant] = Array(account.favorites!) as! [Rant]
+        rantsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
+        
+        return rantsArray
     }
     else{
-     return NSSet()
+     return [Rant]()
     }
 }

@@ -28,14 +28,14 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("favoriteFeedCell", forIndexPath: indexPath) as! FavoriteTableCell
-        let rantsArray = Array(rants)
-        cell.rant = rantsArray[indexPath.row] as? Rant
-        cell.titleLabel?.text = rantsArray[indexPath.row].valueForKey("title") as? String
-        let acc = rantsArray[indexPath.row].valueForKey("account") as? Account
+        
+        cell.rant = rants[indexPath.row]
+        cell.titleLabel?.text = rants[indexPath.row].valueForKey("title") as? String
+        let acc = rants[indexPath.row].valueForKey("account") as? Account
         cell.usernameLabel?.text = acc?.user!
         
-        if let upvotes = rantsArray[indexPath.row].valueForKey("upvotes"){
-            if let downvotes = rantsArray[indexPath.row].valueForKey("downvotes"){
+        if let upvotes = rants[indexPath.row].valueForKey("upvotes"){
+            if let downvotes = rants[indexPath.row].valueForKey("downvotes"){
                 let score = (upvotes as! Int) - (downvotes as! Int)
                 cell.scoreLabel?.text = "\(score)"
             }
@@ -60,7 +60,7 @@ class FavoritesTableViewController: UITableViewController {
             let ervc = segue.destinationViewController as? ExpandedRantViewController
         {
             let rantsArray = Array(rants)
-            ervc.rant = rantsArray[index] as? Rant
+            ervc.rant = rantsArray[index]
         }
         
     }

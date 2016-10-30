@@ -152,15 +152,6 @@
                                     <rect key="frame" x="119" y="70" width="207" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="70" width="38" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-aa-DgT">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -275,12 +266,20 @@
                                     <action selector="upVoteButtonPressed:" destination="Bew-Jr-t37" eventType="touchUpInside" id="9Nu-XN-3Vs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="70" width="38" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="yTk-1Q-TKQ"/>
-                                <exclude reference="PNN-nb-sFh"/>
                                 <exclude reference="Bbm-aa-DgT"/>
                                 <exclude reference="EuS-pR-rgT"/>
                                 <exclude reference="erJ-WN-bAt"/>
@@ -293,12 +292,12 @@
                                 <exclude reference="IVh-R9-79d"/>
                                 <exclude reference="YaY-Tz-1L4"/>
                                 <exclude reference="kGR-71-VPI"/>
+                                <exclude reference="PNN-nb-sFh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="yTk-1Q-TKQ"/>
-                                <include reference="PNN-nb-sFh"/>
                                 <include reference="Bbm-aa-DgT"/>
                                 <include reference="EuS-pR-rgT"/>
                                 <include reference="erJ-WN-bAt"/>
@@ -311,6 +310,7 @@
                                 <include reference="IVh-R9-79d"/>
                                 <include reference="YaY-Tz-1L4"/>
                                 <include reference="kGR-71-VPI"/>
+                                <include reference="PNN-nb-sFh"/>
                             </mask>
                         </variation>
                     </view>

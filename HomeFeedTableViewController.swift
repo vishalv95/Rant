@@ -12,7 +12,7 @@ import CoreData
 class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, TagAction {
     
     let cellIdentifier = "homeFeedCell"
-    var rants = [NSManagedObject]()
+    var rants = [Rant]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,8 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
     }
     
     func sendTag(tag: String) {
-        var allRants:[NSManagedObject] = retrieveRants()
-        var filteredRants = [NSManagedObject]()
+        var allRants:[Rant] = retrieveRants()
+        var filteredRants = [Rant]()
         for i in 0..<(allRants.count){
             let rantTag = allRants[i].valueForKey("tags") as? String
 
@@ -59,7 +59,7 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! HomeFeedCell
-        cell.rant = rants[indexPath.row] as? Rant
+        cell.rant = rants[indexPath.row]
         cell.titleLabel?.text = rants[indexPath.row].valueForKey("title") as? String
         let acc = rants[indexPath.row].valueForKey("account") as? Account
         cell.usernameLabel?.text = acc?.user!
@@ -102,7 +102,7 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
             let index = tableView.indexPathForSelectedRow?.row,
             let ervc = segue.destinationViewController as? ExpandedRantViewController
         {
-            ervc.rant = rants[index] as? Rant
+            ervc.rant = rants[index]
         }
         
     }
