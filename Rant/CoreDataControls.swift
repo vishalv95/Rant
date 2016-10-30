@@ -157,3 +157,15 @@ func retrieveRantsForThisUser() -> [Rant] {
         return [Rant]()
     }
 }
+func retrieveThisAccount() -> Account? {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    if let username = defaults.objectForKey("username") as? String{
+        let account = retrieveAccountForUser(username) as! Account
+        return account
+    }
+    else{
+        return nil
+    }
+    
+}
+

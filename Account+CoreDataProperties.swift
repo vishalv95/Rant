@@ -21,5 +21,6 @@ extension Account {
     @NSManaged var comment: NSSet?
     @NSManaged var favorites: NSSet?
     @NSManaged var rant: NSSet?
+    @NSManaged var profileImage: NSData?
 
 }

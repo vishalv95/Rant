@@ -900,7 +900,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="5" y="25" width="43" height="21"/>
+                                                        <rect key="frame" x="4" y="25" width="43" height="21"/>
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vn-u4-ueh">
@@ -975,6 +975,15 @@
                                     <rect key="frame" x="0.0" y="236" width="400" height="315"/>
                                 </variation>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB4-kT-sHb">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="207" width="187" height="21"/>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-8C-V9T">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -990,6 +999,7 @@
                                 <exclude reference="9Ab-YA-6gs"/>
                                 <exclude reference="Mmt-XD-pEV"/>
                                 <exclude reference="cPC-XV-txD"/>
+                                <exclude reference="MB4-kT-sHb"/>
                                 <exclude reference="H6b-8C-V9T"/>
                             </mask>
                         </variation>
@@ -1000,18 +1010,26 @@
                                 <include reference="9Ab-YA-6gs"/>
                                 <include reference="Mmt-XD-pEV"/>
                                 <include reference="cPC-XV-txD"/>
+                                <include reference="MB4-kT-sHb"/>
                                 <include reference="H6b-8C-V9T"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_account_circle_white" id="WaU-fN-hXW"/>
-                    <navigationItem key="navigationItem" title="Profile" id="EM5-oO-BTi"/>
+                    <navigationItem key="navigationItem" title="Profile" id="EM5-oO-BTi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="XT9-eP-bc2">
+                            <connections>
+                                <action selector="editProfilePictureButtonPressed:" destination="M7I-KD-3xm" id="G5M-eS-aog"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="badge1" destination="FzQ-PB-YRS" id="UKr-gv-7tz"/>
                         <outlet property="badge3" destination="9Ab-YA-6gs" id="mdh-fD-Dch"/>
                         <outlet property="badge4" destination="Mmt-XD-pEV" id="zOq-Xu-HDH"/>
                         <outlet property="profileImage" destination="H6b-8C-V9T" id="EAn-XT-LoD"/>
-                        <outlet property="tableView" destination="cPC-XV-txD" id="vjl-lK-EmT"/>
+                        <outlet property="profileTableView" destination="cPC-XV-txD" id="TmW-Tz-UwV"/>
+                        <outlet property="usernameLabel" destination="MB4-kT-sHb" id="MmH-O3-qkn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggs-Xj-BDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
