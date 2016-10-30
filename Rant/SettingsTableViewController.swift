@@ -10,6 +10,12 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+//    @IBOutlet weak var usernameLabel: UILabel!
+//    @IBOutlet weak var locationLabel: UILabel!
+//
+//    @IBAction func notifToggled(sender: AnyObject) {
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
