@@ -45,10 +45,6 @@ class AddRantViewController: UIViewController, UIPopoverPresentationControllerDe
             alert.dismissViewControllerAnimated(true, completion: nil)
         }))
         presentViewController(alert, animated: true, completion: nil)
-        
-        
-
-        
     }
     
     func sendTag(tag: String) {

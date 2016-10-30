@@ -48,12 +48,34 @@
                                                 <rect key="frame" x="8" y="26" width="43" height="21"/>
                                             </variation>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-86-zeN">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" image="ic_keyboard_arrow_down"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="44" width="34" height="30"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="downVoteButtonPressed:" destination="LSx-kZ-SJh" eventType="touchUpInside" id="5bL-Lh-Srk"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-D0-bkQ">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" image="ic_keyboard_arrow_up"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="0.0" width="34" height="30"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="upVoteButtonPressed:" destination="LSx-kZ-SJh" eventType="touchUpInside" id="eH6-1P-eud"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="yi8-Xb-pVG"/>
                                             <exclude reference="WMz-1Q-oZW"/>
                                             <exclude reference="hAx-1W-SAV"/>
+                                            <exclude reference="zPf-86-zeN"/>
+                                            <exclude reference="pu7-D0-bkQ"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -61,12 +83,16 @@
                                             <include reference="yi8-Xb-pVG"/>
                                             <include reference="WMz-1Q-oZW"/>
                                             <include reference="hAx-1W-SAV"/>
+                                            <include reference="zPf-86-zeN"/>
+                                            <include reference="pu7-D0-bkQ"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="downVoteButton" destination="zPf-86-zeN" id="QRe-h2-wLQ"/>
                                     <outlet property="scoreLabel" destination="hAx-1W-SAV" id="Mbr-Ef-qen"/>
                                     <outlet property="titleLabel" destination="WMz-1Q-oZW" id="4jd-Gk-hxb"/>
+                                    <outlet property="upVoteButton" destination="pu7-D0-bkQ" id="9UY-T6-fUX"/>
                                     <outlet property="usernameLabel" destination="yi8-Xb-pVG" id="4bg-vl-4GK"/>
                                     <segue destination="Bew-Jr-t37" kind="show" identifier="expandRantSegue" id="JLf-py-dPf"/>
                                 </connections>
@@ -790,12 +816,15 @@
             <objects>
                 <tableViewController id="fcN-e6-SqJ" customClass="FavoritesTableViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="5aP-Fh-MMr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteFeedCell" rowHeight="75" id="Y6F-05-GfE" customClass="FavoriteTableCell" customModule="Rant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y6F-05-GfE" id="bT6-Lz-LrA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-oe-z4B">
@@ -1043,6 +1072,8 @@
         <image name="ic_account_circle_white" width="24" height="24"/>
         <image name="ic_favorite_white" width="24" height="24"/>
         <image name="ic_home_white" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_down" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_up" width="24" height="24"/>
         <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_star_white" width="24" height="24"/>
     </resources>

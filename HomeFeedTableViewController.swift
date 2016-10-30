@@ -46,8 +46,7 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
         tableView.reloadData()
         
     }
-    
-  
+      
     func refresh(sender:AnyObject) {
         rants = retrieveRants()
         self.tableView.reloadData()
@@ -60,10 +59,10 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! HomeFeedCell
+        cell.rant = rants[indexPath.row] as? Rant
         cell.titleLabel?.text = rants[indexPath.row].valueForKey("title") as? String
         let acc = rants[indexPath.row].valueForKey("account") as? Account
         cell.usernameLabel?.text = acc?.user!
-        
         
         if let upvotes = rants[indexPath.row].valueForKey("upvotes"){
             if let downvotes = rants[indexPath.row].valueForKey("downvotes"){

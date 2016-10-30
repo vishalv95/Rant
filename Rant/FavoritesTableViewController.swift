@@ -11,6 +11,7 @@ import CoreData
 
 class FavoritesTableViewController: UITableViewController {
     var rants = retrieveFavoritesForThisUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 75
@@ -18,6 +19,11 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rants.count
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        rants = retrieveFavoritesForThisUser()
+        tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
