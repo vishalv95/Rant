@@ -102,7 +102,7 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
             let index = tableView.indexPathForSelectedRow?.row,
             let ervc = segue.destinationViewController as? ExpandedRantViewController
         {
-            ervc.rant = rants[index] 
+            ervc.rant = rants[index] as? Rant
         }
         
     }

@@ -20,7 +20,7 @@ class ExpandedRantViewController: UIViewController {
     @IBOutlet weak var sampleComment1: UILabel!
     @IBOutlet weak var sampleComment2: UILabel!
     
-    var rant:NSManagedObject? = nil
+    var rant:Rant? = nil
     
     override func viewDidAppear(animated: Bool) {
         titleLabel.text = rant!.valueForKey("title") as? String
@@ -40,7 +40,7 @@ class ExpandedRantViewController: UIViewController {
         else{
             scoreLabel.text = "0"
         }
-        if let comments = (rant as? Rant)!.comment {
+        if let comments = rant!.comment {
             var commentsArray:[Comment] = Array(comments) as! [Comment]
             commentsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
             
@@ -84,6 +84,29 @@ class ExpandedRantViewController: UIViewController {
         performSegueWithIdentifier("addCommentSegue", sender: self)
         
     }
+    
+    
+    @IBOutlet weak var upVoteButton: UIButton!
+    @IBOutlet weak var downVoteButton: UIButton!
+    
+    @IBAction func upVoteButtonPressed(sender: AnyObject) {
+        let newScore = Int(scoreLabel.text!)! + 1
+        scoreLabel.text = "\(newScore)"
+        rant!.upVote()
+        self.upVoteButton.enabled = false
+        self.downVoteButton.enabled = true
+    }
+    
+    @IBAction func downVoteButtonPressed(sender: AnyObject) {
+        let newScore = Int(scoreLabel.text!)! - 1
+        scoreLabel.text = "\(Int(newScore))"
+        rant!.downVote()
+        self.upVoteButton.enabled = true
+        self.downVoteButton.enabled = false
+    }
+
+    
+    
 
     @IBAction func favoriteButtonPressed(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -110,13 +133,13 @@ class ExpandedRantViewController: UIViewController {
 
         if segue.identifier == "commentsSegue",
             let ctvc = segue.destinationViewController as? CommentTableViewController{
-            ctvc.rant = rant as? Rant
+            ctvc.rant = rant
         }
         
         
         if segue.identifier == "addCommentSegue",
             let acvc = segue.destinationViewController as? AddCommentViewController{
-            acvc.rant = rant as? Rant
+            acvc.rant = rant
         }
         
         

@@ -17,18 +17,19 @@ class FavoritesTableViewController: UITableViewController {
         self.tableView.rowHeight = 75
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rants.count
-    }
-    
     override func viewWillAppear(animated: Bool) {
         rants = retrieveFavoritesForThisUser()
         tableView.reloadData()
     }
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rants.count
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("favoriteFeedCell", forIndexPath: indexPath) as! FavoriteTableCell
         let rantsArray = Array(rants)
+        cell.rant = rantsArray[indexPath.row] as? Rant
         cell.titleLabel?.text = rantsArray[indexPath.row].valueForKey("title") as? String
         let acc = rantsArray[indexPath.row].valueForKey("account") as? Account
         cell.usernameLabel?.text = acc?.user!
@@ -51,4 +52,7 @@ class FavoritesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    
+    
 }

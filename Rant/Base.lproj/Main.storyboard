@@ -149,16 +149,16 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="72" width="314" height="21"/>
+                                    <rect key="frame" x="119" y="70" width="207" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-nb-sFh">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="72" width="30" height="21"/>
+                                    <rect key="frame" x="38" y="70" width="38" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-aa-DgT">
@@ -176,7 +176,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="72" width="7" height="21"/>
+                                    <rect key="frame" x="99" y="70" width="7" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob: Another sample comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erJ-WN-bAt">
@@ -255,6 +255,26 @@
                                     <rect key="frame" x="20" y="142" width="351" height="90"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Tz-1L4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="ic_keyboard_arrow_left"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="69" width="24" height="24"/>
+                                </variation>
+                                <connections>
+                                    <action selector="downVoteButtonPressed:" destination="Bew-Jr-t37" eventType="touchUpInside" id="XiK-Vz-p2P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGR-71-VPI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="ic_keyboard_arrow_right"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="69" width="24" height="24"/>
+                                </variation>
+                                <connections>
+                                    <action selector="upVoteButtonPressed:" destination="Bew-Jr-t37" eventType="touchUpInside" id="9Nu-XN-3Vs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -271,6 +291,8 @@
                                 <exclude reference="hhM-vr-Ict"/>
                                 <exclude reference="Xlo-x8-hA0"/>
                                 <exclude reference="IVh-R9-79d"/>
+                                <exclude reference="YaY-Tz-1L4"/>
+                                <exclude reference="kGR-71-VPI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -287,6 +309,8 @@
                                 <include reference="hhM-vr-Ict"/>
                                 <include reference="Xlo-x8-hA0"/>
                                 <include reference="IVh-R9-79d"/>
+                                <include reference="YaY-Tz-1L4"/>
+                                <include reference="kGR-71-VPI"/>
                             </mask>
                         </variation>
                     </view>
@@ -308,10 +332,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bodyLabel" destination="IVh-R9-79d" id="wm1-z4-YX4"/>
+                        <outlet property="downVoteButton" destination="YaY-Tz-1L4" id="H73-9J-Ax2"/>
                         <outlet property="sampleComment1" destination="bia-vF-5WJ" id="ba1-yU-IXN"/>
                         <outlet property="sampleComment2" destination="erJ-WN-bAt" id="AgB-GT-zT7"/>
                         <outlet property="scoreLabel" destination="PNN-nb-sFh" id="9tq-Fg-U4g"/>
                         <outlet property="titleLabel" destination="Bbm-aa-DgT" id="4Is-52-MOx"/>
+                        <outlet property="upVoteButton" destination="kGR-71-VPI" id="Mv5-Tl-Qh7"/>
                         <outlet property="usernameLabel" destination="yTk-1Q-TKQ" id="bjs-hP-yjf"/>
                         <segue destination="tGH-Tk-6t0" kind="presentation" identifier="addCommentSegue" id="r90-fs-L2K"/>
                     </connections>
@@ -853,12 +879,34 @@
                                                 <rect key="frame" x="68" y="39" width="333" height="21"/>
                                             </variation>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXA-A4-sBO">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" image="ic_keyboard_arrow_up"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="0.0" width="34" height="30"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="upVoteButtonPressed:" destination="Y6F-05-GfE" eventType="touchUpInside" id="v5I-mV-xHp"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-a6-B4S">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <state key="normal" image="ic_keyboard_arrow_down"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="12" y="44" width="34" height="30"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="downVoteButtonPressed:" destination="Y6F-05-GfE" eventType="touchUpInside" id="M6r-xC-RSW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="xbQ-oe-z4B"/>
                                             <exclude reference="vGL-Tw-jID"/>
                                             <exclude reference="5jK-vu-CIP"/>
+                                            <exclude reference="dXA-A4-sBO"/>
+                                            <exclude reference="cpU-a6-B4S"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -866,12 +914,16 @@
                                             <include reference="xbQ-oe-z4B"/>
                                             <include reference="vGL-Tw-jID"/>
                                             <include reference="5jK-vu-CIP"/>
+                                            <include reference="dXA-A4-sBO"/>
+                                            <include reference="cpU-a6-B4S"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="downVoteButton" destination="cpU-a6-B4S" id="31h-uU-cTH"/>
                                     <outlet property="scoreLabel" destination="xbQ-oe-z4B" id="wck-PG-FdO"/>
                                     <outlet property="titleLabel" destination="vGL-Tw-jID" id="PoB-8z-k9a"/>
+                                    <outlet property="upVoteButton" destination="dXA-A4-sBO" id="7ab-wV-XA6"/>
                                     <outlet property="usernameLabel" destination="5jK-vu-CIP" id="OGB-Qq-U1a"/>
                                 </connections>
                             </tableViewCell>
@@ -1073,6 +1125,8 @@
         <image name="ic_favorite_white" width="24" height="24"/>
         <image name="ic_home_white" width="24" height="24"/>
         <image name="ic_keyboard_arrow_down" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_left" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_right" width="24" height="24"/>
         <image name="ic_keyboard_arrow_up" width="24" height="24"/>
         <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_star_white" width="24" height="24"/>

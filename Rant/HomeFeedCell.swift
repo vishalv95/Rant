@@ -22,15 +22,32 @@ class HomeFeedCell: UITableViewCell {
         let newScore = Int(scoreLabel.text!)! + 1
         scoreLabel.text = "\(newScore)"
         rant!.upVote()
-        self.upVoteButton.enabled = false
+        
+        if self.downVoteButton.enabled{
+            self.upVoteButton.enabled = false
+        }
+            
+        else {
+            self.upVoteButton.enabled = true
+        }
         self.downVoteButton.enabled = true
+
     }
     
     @IBAction func downVoteButtonPressed(sender: AnyObject) {
         let newScore = Int(scoreLabel.text!)! - 1
         scoreLabel.text = "\(Int(newScore))"
         rant!.downVote()
+        
+        if self.upVoteButton.enabled{
+            self.downVoteButton.enabled = false
+        }
+        
+        else {
+            self.downVoteButton.enabled = true
+        }
         self.upVoteButton.enabled = true
-        self.downVoteButton.enabled = false
+        
+        
     }
 }
