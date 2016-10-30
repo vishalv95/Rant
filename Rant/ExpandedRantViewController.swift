@@ -167,7 +167,6 @@ class ExpandedRantViewController: UIViewController {
         
         if segue.identifier == "editRantSegue",
             let arvc = segue.destinationViewController as? AddRantViewController{
-            
             arvc.header = "Edit Rant"
             arvc.titleText = titleLabel.text
             arvc.body = bodyLabel.text
