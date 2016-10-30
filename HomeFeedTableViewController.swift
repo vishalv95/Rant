@@ -44,7 +44,6 @@ class HomeFeedTableViewController: UITableViewController, UIPopoverPresentationC
         
         rants = filteredRants
         tableView.reloadData()
-        
     }
       
     func refresh(sender:AnyObject) {

@@ -861,28 +861,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FzQ-PB-YRS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_record_voice_over" translatesAutoresizingMaskIntoConstraints="NO" id="FzQ-PB-YRS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="41" y="72" width="47" height="47"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GuS-av-beA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lightbulb_outline" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-YA-6gs">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="155" width="47" height="47"/>
+                                    <rect key="frame" x="315" y="72" width="47" height="47"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-YA-6gs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_work" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-XD-pEV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="308" y="72" width="47" height="47"/>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-XD-pEV">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="308" y="155" width="47" height="47"/>
+                                    <rect key="frame" x="315" y="155" width="47" height="47"/>
                                 </variation>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-XV-txD">
@@ -893,6 +887,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VP2-4r-OrK" id="Kgp-l4-1Zn">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-dg-RDA">
@@ -990,28 +985,34 @@
                                     <rect key="frame" x="135" y="72" width="130" height="130"/>
                                 </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thumb_up" translatesAutoresizingMaskIntoConstraints="NO" id="GuS-av-beA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="155" width="47" height="47"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FzQ-PB-YRS"/>
-                                <exclude reference="GuS-av-beA"/>
                                 <exclude reference="9Ab-YA-6gs"/>
                                 <exclude reference="Mmt-XD-pEV"/>
                                 <exclude reference="cPC-XV-txD"/>
                                 <exclude reference="MB4-kT-sHb"/>
                                 <exclude reference="H6b-8C-V9T"/>
+                                <exclude reference="GuS-av-beA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FzQ-PB-YRS"/>
-                                <include reference="GuS-av-beA"/>
                                 <include reference="9Ab-YA-6gs"/>
                                 <include reference="Mmt-XD-pEV"/>
                                 <include reference="cPC-XV-txD"/>
                                 <include reference="MB4-kT-sHb"/>
                                 <include reference="H6b-8C-V9T"/>
+                                <include reference="GuS-av-beA"/>
                             </mask>
                         </variation>
                     </view>
@@ -1025,6 +1026,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="badge1" destination="FzQ-PB-YRS" id="UKr-gv-7tz"/>
+                        <outlet property="badge2" destination="GuS-av-beA" id="Mni-rn-LLU"/>
                         <outlet property="badge3" destination="9Ab-YA-6gs" id="mdh-fD-Dch"/>
                         <outlet property="badge4" destination="Mmt-XD-pEV" id="zOq-Xu-HDH"/>
                         <outlet property="profileImage" destination="H6b-8C-V9T" id="EAn-XT-LoD"/>
@@ -1340,15 +1342,19 @@
         <image name="ic_keyboard_arrow_left" width="24" height="24"/>
         <image name="ic_keyboard_arrow_right" width="24" height="24"/>
         <image name="ic_keyboard_arrow_up" width="24" height="24"/>
+        <image name="ic_lightbulb_outline" width="24" height="24"/>
+        <image name="ic_record_voice_over" width="24" height="24"/>
         <image name="ic_settings_white" width="24" height="24"/>
         <image name="ic_star_white" width="24" height="24"/>
+        <image name="ic_thumb_up" width="24" height="24"/>
+        <image name="ic_work" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AvA-aB-SsH"/>
         <segue reference="ZeR-hd-3FZ"/>
         <segue reference="ahE-ON-Uu5"/>
-        <segue reference="0Wv-U9-lcq"/>
         <segue reference="oAl-VU-gXQ"/>
+        <segue reference="7hK-wO-nYi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
