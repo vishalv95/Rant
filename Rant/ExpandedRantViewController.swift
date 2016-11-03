@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class ExpandedRantViewController: UIViewController {
+class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -20,16 +20,19 @@ class ExpandedRantViewController: UIViewController {
     @IBOutlet weak var sampleComment1: UILabel!
     @IBOutlet weak var sampleComment2: UILabel!
     
-    var rant:Rant? = nil
+    @IBOutlet weak var solutionTable: UITableView!
+    
+    var rant:Rant!
+    let cellId = "cellID"
     
     override func viewDidAppear(animated: Bool) {
-        titleLabel.text = rant!.valueForKey("title") as? String
-        bodyLabel.text = rant!.valueForKey("body") as? String
-        let acc = rant!.valueForKey("account") as? Account
+        titleLabel.text = rant.valueForKey("title") as? String
+        bodyLabel.text = rant.valueForKey("body") as? String
+        let acc = rant.valueForKey("account") as? Account
         usernameLabel.text = acc!.user
         
-        if let upvotes = rant!.valueForKey("upvotes"){
-            if let downvotes = rant!.valueForKey("downvotes"){
+        if let upvotes = rant.valueForKey("upvotes"){
+            if let downvotes = rant.valueForKey("downvotes"){
                 let score = (upvotes as! Int) - (downvotes as! Int)
                 scoreLabel.text = "\(score)"
             }
@@ -40,7 +43,7 @@ class ExpandedRantViewController: UIViewController {
         else{
             scoreLabel.text = "0"
         }
-        if let comments = rant!.comment {
+        if let comments = rant.comment {
             var commentsArray:[Comment] = Array(comments) as! [Comment]
             commentsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
             
@@ -72,6 +75,8 @@ class ExpandedRantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        solutionTable.delegate = self
+        solutionTable.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,7 +92,7 @@ class ExpandedRantViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let username = defaults.objectForKey("username") as? String
 
-        if rant?.account?.user == username {
+        if rant.account?.user == username {
             alert.addAction(UIAlertAction(title: "Edit my Rant", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
                 self.performSegueWithIdentifier("editRantSegue", sender: self)
             }))
@@ -115,7 +120,7 @@ class ExpandedRantViewController: UIViewController {
     @IBAction func upVoteButtonPressed(sender: AnyObject) {
         let newScore = Int(scoreLabel.text!)! + 1
         scoreLabel.text = "\(newScore)"
-        rant!.upVote()
+        rant.upVote()
         self.upVoteButton.enabled = false
         self.downVoteButton.enabled = true
     }
@@ -123,7 +128,7 @@ class ExpandedRantViewController: UIViewController {
     @IBAction func downVoteButtonPressed(sender: AnyObject) {
         let newScore = Int(scoreLabel.text!)! - 1
         scoreLabel.text = "\(Int(newScore))"
-        rant!.downVote()
+        rant.downVote()
         self.upVoteButton.enabled = true
         self.downVoteButton.enabled = false
     }
@@ -137,7 +142,7 @@ class ExpandedRantViewController: UIViewController {
         let account = retrieveAccountForUser((defaults.objectForKey("username") as? String)!) as! Account
 
         let favorites = account.mutableSetValueForKey("favorites")
-        favorites.addObject(rant!)
+        favorites.addObject(rant)
         
         // Commit the changes
         do {
@@ -172,9 +177,26 @@ class ExpandedRantViewController: UIViewController {
             arvc.editRant = rant
         }
         
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
         
-        
-        
+//        let row = indexPath.row
+        cell.textLabel?.text = "test"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
  
 
