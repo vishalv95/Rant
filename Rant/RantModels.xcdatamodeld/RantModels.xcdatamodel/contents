@@ -9,6 +9,7 @@
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Comment" inverseName="account" inverseEntity="Comment" syncable="YES"/>
         <relationship name="favorites" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Rant" syncable="YES"/>
         <relationship name="rant" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Rant" inverseName="account" inverseEntity="Rant" syncable="YES"/>
+        <relationship name="solutions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Solution" inverseName="owner" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Comment" representedClassName=".Comment" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,10 +26,25 @@
         <attribute name="upvotes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Account" inverseName="rant" inverseEntity="Account" syncable="YES"/>
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Comment" inverseName="rant" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="solutions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Solution" inverseName="rant" inverseEntity="Solution" syncable="YES"/>
+    </entity>
+    <entity name="Solution" representedClassName=".Solution" syncable="YES">
+        <attribute name="contributions" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contributors" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dislikes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="likes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slogan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="solutions" inverseEntity="Account" syncable="YES"/>
+        <relationship name="rant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rant" inverseName="solutions" inverseEntity="Rant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Rant" positionX="-27" positionY="18" width="128" height="165"/>
+        <element name="Account" positionX="54" positionY="99" width="128" height="180"/>
         <element name="Comment" positionX="18" positionY="63" width="128" height="105"/>
-        <element name="Account" positionX="54" positionY="99" width="128" height="165"/>
+        <element name="Rant" positionX="-27" positionY="18" width="128" height="180"/>
+        <element name="Solution" positionX="18" positionY="126" width="128" height="210"/>
     </elements>
 </model>

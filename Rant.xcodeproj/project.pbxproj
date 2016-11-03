@@ -45,6 +45,8 @@
 		7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */; };
 		7FFC543F1DC66A4F00F98F0A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */; };
 		7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */; };
+		C24AB3E71DCAFE0100F97D05 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24AB3E51DCAFE0100F97D05 /* Solution+CoreDataProperties.swift */; };
+		C24AB3E81DCAFE0100F97D05 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24AB3E61DCAFE0100F97D05 /* Solution.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C24AB3E51DCAFE0100F97D05 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C24AB3E61DCAFE0100F97D05 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,8 @@
 		7FBF75EF1DC4313A0044AF6C /* CoreDataObjects */ = {
 			isa = PBXGroup;
 			children = (
+				C24AB3E51DCAFE0100F97D05 /* Solution+CoreDataProperties.swift */,
+				C24AB3E61DCAFE0100F97D05 /* Solution.swift */,
 				7F698CA11DC995AC008B8539 /* Account+CoreDataProperties.swift */,
 				7F698CA21DC995AC008B8539 /* Rant+CoreDataProperties.swift */,
 				7F698CA31DC995AC008B8539 /* Comment+CoreDataProperties.swift */,
@@ -377,12 +383,14 @@
 				7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */,
 				34EE65971DB9838400B1A76B /* SettingsViewController.swift in Sources */,
 				34EE65911DB9769900B1A76B /* HomeFeedNavigationController.swift in Sources */,
+				C24AB3E81DCAFE0100F97D05 /* Solution.swift in Sources */,
 				7F698CA01DC99450008B8539 /* RantModels.xcdatamodeld in Sources */,
 				7FBF75FE1DC570480044AF6C /* FavoriteTableCell.swift in Sources */,
 				34EBB2881DC2A20E00516751 /* CommentTableViewController.swift in Sources */,
 				7FBF75F41DC447560044AF6C /* FavoritesNavigationController.swift in Sources */,
 				7F698CA41DC995AC008B8539 /* Account+CoreDataProperties.swift in Sources */,
 				7FBF76041DC5C9730044AF6C /* ProfileNavigationController.swift in Sources */,
+				C24AB3E71DCAFE0100F97D05 /* Solution+CoreDataProperties.swift in Sources */,
 				3410351C1DB845A800C57A19 /* TagCell.swift in Sources */,
 				341034B31DB6E46000C57A19 /* AppDelegate.swift in Sources */,
 				34EBB2A61DC2C6B600516751 /* Rant.swift in Sources */,
