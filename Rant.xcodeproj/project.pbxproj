@@ -48,6 +48,7 @@
 		C24AB3E71DCAFE0100F97D05 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24AB3E51DCAFE0100F97D05 /* Solution+CoreDataProperties.swift */; };
 		C24AB3E81DCAFE0100F97D05 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24AB3E61DCAFE0100F97D05 /* Solution.swift */; };
 		C2B2E5731DCB7BE900CB9ABB /* AddSolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2E5721DCB7BE900CB9ABB /* AddSolutionViewController.swift */; };
+		C2B2E5751DCBBC3D00CB9ABB /* SolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2E5741DCBBC3D00CB9ABB /* SolutionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		C24AB3E51DCAFE0100F97D05 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C24AB3E61DCAFE0100F97D05 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		C2B2E5721DCB7BE900CB9ABB /* AddSolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSolutionViewController.swift; sourceTree = "<group>"; };
+		C2B2E5741DCBBC3D00CB9ABB /* SolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */,
 				341034B21DB6E46000C57A19 /* AppDelegate.swift */,
 				341034B81DB6E46000C57A19 /* Main.storyboard */,
+				C2B2E5741DCBBC3D00CB9ABB /* SolutionViewController.swift */,
 				7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */,
 				7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */,
 				7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */,
@@ -380,6 +383,7 @@
 				C2B2E5731DCB7BE900CB9ABB /* AddSolutionViewController.swift in Sources */,
 				34EBB28A1DC2A22000516751 /* CommentTableViewCell.swift in Sources */,
 				341034F01DB82A1E00C57A19 /* AddRantViewController.swift in Sources */,
+				C2B2E5751DCBBC3D00CB9ABB /* SolutionViewController.swift in Sources */,
 				341034E91DB6F23100C57A19 /* HomeFeedCell.swift in Sources */,
 				7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */,
 				7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */,

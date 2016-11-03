@@ -23,9 +23,12 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var solutionTable: UITableView!
     
     var rant:Rant!
+    var solutions = [Solution]()
     let cellId = "cellID"
     
     override func viewDidAppear(animated: Bool) {
+        solutions = Array(arrayLiteral: rant.solutions!) as! [Solution]
+        
         titleLabel.text = rant.valueForKey("title") as? String
         bodyLabel.text = rant.valueForKey("body") as? String
         let acc = rant.valueForKey("account") as? Account
@@ -185,6 +188,8 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
             asvc.rant = self.rant
         }
         
+//        if segue.identifier == "solutionSegue",
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -192,14 +197,14 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return solutions.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
         
-//        let row = indexPath.row
-        cell.textLabel?.text = "test"
+        let row = indexPath.row
+        cell.textLabel?.text = solutions[row].title
         return cell
     }
     
