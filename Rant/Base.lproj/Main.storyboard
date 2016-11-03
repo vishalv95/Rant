@@ -775,7 +775,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3q-UR-m9S" customClass="GIDSignInButton">
-                                <rect key="frame" x="100" y="386" width="180" height="35"/>
+                                <rect key="frame" x="210" y="387" width="180" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
