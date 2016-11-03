@@ -40,6 +40,20 @@ class AddSolutionViewController: UIViewController, UITextViewDelegate {
         self.summary.textColor = UIColor.lightGrayColor()
     }
     
+    func textViewDidBeginEditing(textView: UITextView) {
+        if summary.textColor == UIColor.lightGrayColor() {
+            summary.text = nil
+            summary.textColor = UIColor.blackColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if summary.text.isEmpty {
+            summary.text = "Enter Summary..."
+            summary.textColor = UIColor.lightGrayColor()
+        }
+    }
+    
     @IBAction func saveButtonPressed() {
         //TODO prevent posting if a field is blank
         let alert:UIAlertController = UIAlertController(title: "Confirm Solution", message: "Are you sure you want to post this solution?", preferredStyle: .Alert)
