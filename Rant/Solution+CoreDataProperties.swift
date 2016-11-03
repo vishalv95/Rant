@@ -14,15 +14,15 @@ import CoreData
 
 extension Solution {
 
-    @NSManaged var title: String?
-    @NSManaged var slogan: String?
-    @NSManaged var summary: String?
-    @NSManaged var likes: NSNumber?
-    @NSManaged var dislikes: NSNumber?
     @NSManaged var contributions: NSNumber?
     @NSManaged var contributors: NSNumber?
+    @NSManaged var dislikes: NSNumber?
+    @NSManaged var likes: NSNumber?
+    @NSManaged var slogan: String?
+    @NSManaged var summary: String?
+    @NSManaged var title: String?
     @NSManaged var comments: NSSet?
-    @NSManaged var event: NSSet?
+    @NSManaged var events: NSSet?
     @NSManaged var owner: Account?
     @NSManaged var rant: Rant?
 

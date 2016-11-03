@@ -266,9 +266,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" textLabel="XDN-FN-6cy" style="IBUITableViewCellStyleDefault" id="xRT-uP-VfL">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xRT-uP-VfL" id="nQW-ma-4bo">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XDN-FN-6cy">
+                                                    <rect key="frame" x="15" y="0.0" width="210" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -350,6 +352,7 @@
                         <outlet property="usernameLabel" destination="yTk-1Q-TKQ" id="bjs-hP-yjf"/>
                         <segue destination="tGH-Tk-6t0" kind="presentation" identifier="addCommentSegue" id="r90-fs-L2K"/>
                         <segue destination="P4G-Nv-sYW" kind="presentation" identifier="editRantSegue" id="rOG-FE-IUo"/>
+                        <segue destination="de7-2J-WXP" kind="presentation" identifier="addSolutionSegue" id="xaD-wN-WOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aV-bM-it2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -588,6 +591,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRy-QR-lKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4333.5" y="310"/>
+        </scene>
+        <!--Add Solution View Controller-->
+        <scene sceneID="wME-lj-JHT">
+            <objects>
+                <viewController id="de7-2J-WXP" customClass="AddSolutionViewController" customModule="Rant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jNj-hU-3pZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="B2N-yq-dqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ciY-26-hfJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose Solution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-lu-x3o">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="24" width="140" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2V-9S-pGW">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="78" width="363" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Slogan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blr-R4-ncH">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="137" width="363" height="30"/>
+                                </variation>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Summary..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-xm-h4z">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="197" width="361" height="150"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-l0-5lj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.31764705879999999" green="0.015686274510000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="183" y="400" width="34" height="37"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="de7-2J-WXP" eventType="touchUpInside" id="0Ar-Lm-Kyj"/>
+                                    <action selector="saveButtonPressed:" destination="tGH-Tk-6t0" eventType="touchUpInside" id="4p1-eW-IKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-6k-ajK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.1942696518" blue="0.15149132069999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="20" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="de7-2J-WXP" eventType="touchUpInside" id="bYG-bW-0t2"/>
+                                    <action selector="cancelButtonPressed:" destination="tGH-Tk-6t0" eventType="touchUpInside" id="qG2-12-Il1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8xK-lu-x3o"/>
+                                <exclude reference="X2V-9S-pGW"/>
+                                <exclude reference="blr-R4-ncH"/>
+                                <exclude reference="Yzr-xm-h4z"/>
+                                <exclude reference="kUA-l0-5lj"/>
+                                <exclude reference="fx6-6k-ajK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8xK-lu-x3o"/>
+                                <include reference="X2V-9S-pGW"/>
+                                <include reference="blr-R4-ncH"/>
+                                <include reference="Yzr-xm-h4z"/>
+                                <include reference="kUA-l0-5lj"/>
+                                <include reference="fx6-6k-ajK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="slogan" destination="blr-R4-ncH" id="RQP-Fh-zEz"/>
+                        <outlet property="summary" destination="Yzr-xm-h4z" id="su2-TU-hdo"/>
+                        <outlet property="titleField" destination="X2V-9S-pGW" id="dGw-ug-o6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whE-DQ-Fi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4320" y="879"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="ega-HS-9LK">
@@ -1826,11 +1933,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2OY-d8-vBX"/>
-        <segue reference="ZlL-66-d08"/>
-        <segue reference="0Wv-U9-lcq"/>
-        <segue reference="JLf-py-dPf"/>
-        <segue reference="Xkb-T0-Qjb"/>
+        <segue reference="ZeR-hd-3FZ"/>
         <segue reference="rOG-FE-IUo"/>
+        <segue reference="JLf-py-dPf"/>
+        <segue reference="0Wv-U9-lcq"/>
+        <segue reference="oAl-VU-gXQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

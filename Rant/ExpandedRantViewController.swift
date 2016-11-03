@@ -101,7 +101,10 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
             self.performSegueWithIdentifier("addCommentSegue", sender: self)
         }))
         
-//        alert.addAction(UIAlertAction(title: "Solution", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Solution", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+            self.performSegueWithIdentifier("addSolutionSegue", sender: self)
+        }))
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action: UIAlertAction!) in
             alert.dismissViewControllerAnimated(true, completion: nil)
         }))
@@ -175,6 +178,11 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
             arvc.titleText = titleLabel.text
             arvc.body = bodyLabel.text
             arvc.editRant = rant
+        }
+        
+        if segue.identifier == "addSolutionSegue",
+            let asvc = segue.destinationViewController as? AddSolutionViewController {
+            asvc.rant = self.rant
         }
         
     }
