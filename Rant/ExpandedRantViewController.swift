@@ -27,8 +27,9 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
     let cellId = "cellID"
     
     override func viewDidAppear(animated: Bool) {
-        solutions = Array(arrayLiteral: rant.solutions!) as! [Solution]
-        
+        solutions = Array(rant.solutions!) as! [Solution]
+        solutionTable.reloadData()
+    
         titleLabel.text = rant.valueForKey("title") as? String
         bodyLabel.text = rant.valueForKey("body") as? String
         let acc = rant.valueForKey("account") as? Account
@@ -188,7 +189,9 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
             asvc.rant = self.rant
         }
         
-//        if segue.identifier == "solutionSegue",
+        if segue.identifier == "solutionSegue", let index = solutionTable.indexPathForSelectedRow?.row {
+            print(index)
+        }
         
     }
     
@@ -204,7 +207,7 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
         
         let row = indexPath.row
-        cell.textLabel?.text = solutions[row].title
+        cell.textLabel?.text = solutions[row].title!
         return cell
     }
     

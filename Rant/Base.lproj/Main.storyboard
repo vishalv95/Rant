@@ -829,15 +829,6 @@
                                     <rect key="frame" x="17" y="137" width="363" height="30"/>
                                 </variation>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Summary..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-xm-h4z">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="19" y="197" width="361" height="150"/>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-l0-5lj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Save">
@@ -864,6 +855,15 @@
                                     <action selector="cancelButtonPressed:" destination="tGH-Tk-6t0" eventType="touchUpInside" id="qG2-12-Il1"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Summary..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-xm-h4z">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="197" width="361" height="150"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -871,9 +871,9 @@
                                 <exclude reference="8xK-lu-x3o"/>
                                 <exclude reference="X2V-9S-pGW"/>
                                 <exclude reference="blr-R4-ncH"/>
-                                <exclude reference="Yzr-xm-h4z"/>
                                 <exclude reference="kUA-l0-5lj"/>
                                 <exclude reference="fx6-6k-ajK"/>
+                                <exclude reference="Yzr-xm-h4z"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -881,9 +881,9 @@
                                 <include reference="8xK-lu-x3o"/>
                                 <include reference="X2V-9S-pGW"/>
                                 <include reference="blr-R4-ncH"/>
-                                <include reference="Yzr-xm-h4z"/>
                                 <include reference="kUA-l0-5lj"/>
                                 <include reference="fx6-6k-ajK"/>
+                                <include reference="Yzr-xm-h4z"/>
                             </mask>
                         </variation>
                     </view>
