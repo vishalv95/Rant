@@ -55,6 +55,7 @@
 		D7A42BB21DCAF64F00B556F5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42BB11DCAF64F00B556F5 /* libz.tbd */; };
 		D7A42BB41DCAF6C200B556F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42BB31DCAF6C200B556F5 /* Bolts.framework */; };
 		D7A42BB81DCAFE0600B556F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7A42BB71DCAFE0600B556F5 /* GoogleService-Info.plist */; };
+		D7E555B41DCBF8D10020B0B3 /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E555B31DCBF8D10020B0B3 /* splashScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		D7A42BB11DCAF64F00B556F5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D7A42BB31DCAF6C200B556F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D7A42BB71DCAFE0600B556F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7E555B31DCBF8D10020B0B3 /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				D7A42B991DCAF2AC00B556F5 /* GoogleSignIn.bundle */,
 				D7A42B9A1DCAF2AE00B556F5 /* GoogleSignIn.framework */,
 				7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */,
+				D7E555B31DCBF8D10020B0B3 /* splashScreen.png */,
 				7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */,
 				7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */,
 				D7A42B911DCACEF800B556F5 /* FBSDKCoreKit.framework */,
@@ -372,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E555B41DCBF8D10020B0B3 /* splashScreen.png in Resources */,
 				D7A42B9B1DCAF2AE00B556F5 /* GoogleSignIn.bundle in Resources */,
 				341034BF1DB6E46000C57A19 /* LaunchScreen.storyboard in Resources */,
 				D7A42BB81DCAFE0600B556F5 /* GoogleService-Info.plist in Resources */,
