@@ -775,8 +775,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3q-UR-m9S" customClass="GIDSignInButton">
-                                <rect key="frame" x="210" y="387" width="180" height="35"/>
+                                <rect key="frame" x="210" y="404" width="180" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="368" width="180" height="35"/>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16470588235294117" green="0.14117647058823529" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
