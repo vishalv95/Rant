@@ -380,7 +380,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-51-Z3P">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hRJ-VJ-uQD">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRJ-VJ-uQD">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -414,6 +414,12 @@
                                                     <rect key="frame" x="85" y="552" width="59" height="49"/>
                                                 </variation>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDZ-AJ-rA9">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="552" width="59" height="49"/>
+                                                </variation>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoI-M7-d58">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -423,12 +429,60 @@
                                                     <rect key="frame" x="168" y="665" width="65" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDZ-AJ-rA9">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-dy-pmn">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="204" y="552" width="59" height="49"/>
+                                                    <rect key="frame" x="131" y="152" width="138" height="21"/>
                                                 </variation>
-                                            </imageView>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-CA-BUE">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="494" width="34" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyt-ty-t6Z">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="195" y="494" width="38" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contributions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCU-4P-z2W">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="144" y="566" width="42" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contributors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-Ju-iTm">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="264" y="566" width="40" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6t-dj-UYY">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="315" y="493" width="41" height="21"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -441,8 +495,14 @@
                                                 <exclude reference="sfv-Vu-Sk7"/>
                                                 <exclude reference="Gb8-bE-NqP"/>
                                                 <exclude reference="EJW-PV-P4w"/>
-                                                <exclude reference="UoI-M7-d58"/>
                                                 <exclude reference="BDZ-AJ-rA9"/>
+                                                <exclude reference="UoI-M7-d58"/>
+                                                <exclude reference="weZ-dy-pmn"/>
+                                                <exclude reference="R10-CA-BUE"/>
+                                                <exclude reference="iyt-ty-t6Z"/>
+                                                <exclude reference="zCU-4P-z2W"/>
+                                                <exclude reference="0s0-Ju-iTm"/>
+                                                <exclude reference="C6t-dj-UYY"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="ou1-D4-ViH"/>
@@ -455,8 +515,14 @@
                                                 <include reference="sfv-Vu-Sk7"/>
                                                 <include reference="Gb8-bE-NqP"/>
                                                 <include reference="EJW-PV-P4w"/>
-                                                <include reference="UoI-M7-d58"/>
                                                 <include reference="BDZ-AJ-rA9"/>
+                                                <include reference="UoI-M7-d58"/>
+                                                <include reference="weZ-dy-pmn"/>
+                                                <include reference="R10-CA-BUE"/>
+                                                <include reference="iyt-ty-t6Z"/>
+                                                <include reference="zCU-4P-z2W"/>
+                                                <include reference="0s0-Ju-iTm"/>
+                                                <include reference="C6t-dj-UYY"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="ou1-D4-ViH"/>
@@ -469,16 +535,7 @@
                                             <rect key="frame" x="80" y="8" width="240" height="128"/>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-dy-pmn">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="179" y="154" width="42" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="78V-kb-aWw">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78V-kb-aWw">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -500,7 +557,6 @@
                                     <mask key="subviews">
                                         <exclude reference="AJ2-51-Z3P"/>
                                         <exclude reference="kAd-wM-2ne"/>
-                                        <exclude reference="weZ-dy-pmn"/>
                                         <exclude reference="78V-kb-aWw"/>
                                     </mask>
                                     <mask key="constraints">
@@ -515,7 +571,6 @@
                                     <mask key="subviews">
                                         <include reference="AJ2-51-Z3P"/>
                                         <include reference="kAd-wM-2ne"/>
-                                        <include reference="weZ-dy-pmn"/>
                                         <include reference="78V-kb-aWw"/>
                                     </mask>
                                     <mask key="constraints">
@@ -554,6 +609,16 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="1200"/>
+                    <connections>
+                        <outlet property="comments" destination="C6t-dj-UYY" id="8hH-kW-uMw"/>
+                        <outlet property="contributions" destination="zCU-4P-z2W" id="1XX-as-R6V"/>
+                        <outlet property="contributors" destination="0s0-Ju-iTm" id="wGD-eh-90v"/>
+                        <outlet property="dislikes" destination="iyt-ty-t6Z" id="7vG-Qn-U0w"/>
+                        <outlet property="likes" destination="R10-CA-BUE" id="tOY-iC-urh"/>
+                        <outlet property="sloganText" destination="78V-kb-aWw" id="bsv-Jf-NEC"/>
+                        <outlet property="summaryText" destination="hRJ-VJ-uQD" id="RqT-CX-StT"/>
+                        <outlet property="titleText" destination="weZ-dy-pmn" id="ci4-Xc-IV2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHl-ZA-icy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

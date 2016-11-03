@@ -189,8 +189,8 @@ class ExpandedRantViewController: UIViewController, UITableViewDataSource, UITab
             asvc.rant = self.rant
         }
         
-        if segue.identifier == "solutionSegue", let index = solutionTable.indexPathForSelectedRow?.row {
-            print(index)
+        if segue.identifier == "solutionSegue", let index = solutionTable.indexPathForSelectedRow?.row, let svc = segue.destinationViewController as? SolutionViewController {
+            svc.solution = solutions[index]
         }
         
     }
