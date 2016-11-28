@@ -10,6 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     @IBAction func logoutPressed(sender: AnyObject) {
+        if let _ = FBSDKAccessToken.currentAccessToken() {
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+        }
+        if (GIDSignIn.sharedInstance().currentUser != nil) {
+            GIDSignIn.sharedInstance().signOut()
+        }
         NSUserDefaults.standardUserDefaults().setBool(false,forKey:"isUserLoggedIn");
         NSUserDefaults.standardUserDefaults().synchronize();
         self.performSegueWithIdentifier("logoutSegue", sender: self);

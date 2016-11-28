@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15G1108" minimumToolsVersion="Xcode 7.0">
     <entity name="Account" representedClassName=".Account" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,6 +9,7 @@
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Comment" inverseName="account" inverseEntity="Comment" syncable="YES"/>
         <relationship name="favorites" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Rant" syncable="YES"/>
         <relationship name="rant" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Rant" inverseName="account" inverseEntity="Rant" syncable="YES"/>
+        <relationship name="solution" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Solution" inverseName="account" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <entity name="Comment" representedClassName=".Comment" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,10 +26,25 @@
         <attribute name="upvotes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Account" inverseName="rant" inverseEntity="Account" syncable="YES"/>
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Comment" inverseName="rant" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="solution" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Solution" inverseName="rant" inverseEntity="Solution" syncable="YES"/>
+    </entity>
+    <entity name="Solution" representedClassName=".Solution" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ts" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Account" inverseName="solution" inverseEntity="Account" syncable="YES"/>
+        <relationship name="rant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Rant" inverseName="solution" inverseEntity="Rant" syncable="YES"/>
+        <relationship name="timeline" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timeline" inverseName="solution" inverseEntity="Timeline" syncable="YES"/>
+    </entity>
+    <entity name="Timeline" representedClassName=".Timeline" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ts" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="solution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Solution" inverseName="timeline" inverseEntity="Solution" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Rant" positionX="-27" positionY="18" width="128" height="165"/>
+        <element name="Account" positionX="54" positionY="99" width="128" height="180"/>
         <element name="Comment" positionX="18" positionY="63" width="128" height="105"/>
-        <element name="Account" positionX="54" positionY="99" width="128" height="165"/>
+        <element name="Rant" positionX="-27" positionY="18" width="128" height="180"/>
+        <element name="Solution" positionX="18" positionY="126" width="128" height="120"/>
+        <element name="Timeline" positionX="27" positionY="144" width="128" height="90"/>
     </elements>
 </model>

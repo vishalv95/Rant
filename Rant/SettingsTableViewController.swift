@@ -14,6 +14,11 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var locationLabel: UILabel!
     
     @IBAction func logoutButtonPressed(sender: AnyObject) {
+        if let _ = FBSDKAccessToken.currentAccessToken() {
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+        }
+        GIDSignIn.sharedInstance().signOut()
         NSUserDefaults.standardUserDefaults().setBool(false,forKey:"isUserLoggedIn");
         NSUserDefaults.standardUserDefaults().synchronize();
         self.performSegueWithIdentifier("logoutSegue", sender: self);

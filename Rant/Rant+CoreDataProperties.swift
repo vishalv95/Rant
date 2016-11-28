@@ -22,5 +22,6 @@ extension Rant {
     @NSManaged var upvotes: NSNumber?
     @NSManaged var account: Account?
     @NSManaged var comment: NSSet?
+    @NSManaged var solution: NSSet?
 
 }

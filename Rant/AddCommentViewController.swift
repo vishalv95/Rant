@@ -29,6 +29,9 @@ class AddCommentViewController: UIViewController, UITextViewDelegate {
         return true
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func textViewDidBeginEditing(textView: UITextView) {
         if bodyTextField.textColor == UIColor.lightGrayColor() {

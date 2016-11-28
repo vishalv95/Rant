@@ -31,6 +31,8 @@
 		34EE658F1DB9755400B1A76B /* RantTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE658E1DB9755400B1A76B /* RantTabBarController.swift */; };
 		34EE65911DB9769900B1A76B /* HomeFeedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */; };
 		34EE65971DB9838400B1A76B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE65961DB9838400B1A76B /* SettingsViewController.swift */; };
+		74403F55FD91579A0897FBA3 /* Pods_RantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9CB61B715CCC56D73093DF /* Pods_RantTests.framework */; };
+		78D625FAFD3F09BFE114BB01 /* Pods_Rant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E65FC03096E4CD6AE6F8262 /* Pods_Rant.framework */; };
 		7F698CA01DC99450008B8539 /* RantModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F698C9E1DC99450008B8539 /* RantModels.xcdatamodeld */; };
 		7F698CA41DC995AC008B8539 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F698CA11DC995AC008B8539 /* Account+CoreDataProperties.swift */; };
 		7F698CA51DC995AC008B8539 /* Rant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F698CA21DC995AC008B8539 /* Rant+CoreDataProperties.swift */; };
@@ -45,6 +47,30 @@
 		7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */; };
 		7FFC543F1DC66A4F00F98F0A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */; };
 		7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */; };
+		C70273E8A2FB7E2E0FEA20B9 /* Pods_RantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958CB48C062B2CB6103415A6 /* Pods_RantUITests.framework */; };
+		D751A7521DEA455500A339FE /* ISTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D751A7511DEA455500A339FE /* ISTimeline.framework */; };
+		D751A7541DEA6ECC00A339FE /* AddTimelineEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */; };
+		D751A7571DEB683600A339FE /* Timeline+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751A7551DEB683600A339FE /* Timeline+CoreDataProperties.swift */; };
+		D751A7581DEB683600A339FE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751A7561DEB683600A339FE /* Timeline.swift */; };
+		D794E6021DE92719004928B7 /* AddSolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E6011DE92719004928B7 /* AddSolutionViewController.swift */; };
+		D794E6051DE941D5004928B7 /* Solution+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E6031DE941D5004928B7 /* Solution+CoreDataProperties.swift */; };
+		D794E6061DE941D5004928B7 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E6041DE941D5004928B7 /* Solution.swift */; };
+		D794E6081DE95610004928B7 /* SolutionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E6071DE95610004928B7 /* SolutionsTableViewController.swift */; };
+		D794E60A1DE95756004928B7 /* SolutionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E6091DE95756004928B7 /* SolutionsTableViewCell.swift */; };
+		D794E60C1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E60B1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift */; };
+		D794E60F1DEA3F3C004928B7 /* ISPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E60D1DEA3F3C004928B7 /* ISPoint.swift */; };
+		D794E6101DEA3F3C004928B7 /* ISTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E60E1DEA3F3C004928B7 /* ISTimeline.swift */; };
+		D7A42B931DCACEF800B556F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42B911DCACEF800B556F5 /* FBSDKCoreKit.framework */; };
+		D7A42B941DCACEF800B556F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42B921DCACEF800B556F5 /* FBSDKLoginKit.framework */; };
+		D7A42B9B1DCAF2AE00B556F5 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7A42B991DCAF2AC00B556F5 /* GoogleSignIn.bundle */; };
+		D7A42B9C1DCAF2AE00B556F5 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42B9A1DCAF2AE00B556F5 /* GoogleSignIn.framework */; };
+		D7A42B9E1DCAF2EC00B556F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42B9D1DCAF2EC00B556F5 /* SystemConfiguration.framework */; };
+		D7A42BA01DCAF2F400B556F5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42B9F1DCAF2F400B556F5 /* StoreKit.framework */; };
+		D7A42BA21DCAF2FF00B556F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42BA11DCAF2FF00B556F5 /* AddressBook.framework */; };
+		D7A42BB21DCAF64F00B556F5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42BB11DCAF64F00B556F5 /* libz.tbd */; };
+		D7A42BB41DCAF6C200B556F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A42BB31DCAF6C200B556F5 /* Bolts.framework */; };
+		D7A42BB81DCAFE0600B556F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7A42BB71DCAFE0600B556F5 /* GoogleService-Info.plist */; };
+		D7E555B41DCBF8D10020B0B3 /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E555B31DCBF8D10020B0B3 /* splashScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +121,8 @@
 		34EE658E1DB9755400B1A76B /* RantTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RantTabBarController.swift; sourceTree = "<group>"; };
 		34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedNavigationController.swift; sourceTree = "<group>"; };
 		34EE65961DB9838400B1A76B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6B61FB9A7CE20E750B89DD29 /* Pods-Rant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rant/Pods-Rant.debug.xcconfig"; sourceTree = "<group>"; };
+		6E8D7CF4CD05083C4B1C437F /* Pods-Rant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rant/Pods-Rant.release.xcconfig"; sourceTree = "<group>"; };
 		7F698C9F1DC99450008B8539 /* RantModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RantModels.xcdatamodel; sourceTree = "<group>"; };
 		7F698CA11DC995AC008B8539 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7F698CA21DC995AC008B8539 /* Rant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rant+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -109,6 +137,38 @@
 		7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		8E65FC03096E4CD6AE6F8262 /* Pods_Rant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		958CB48C062B2CB6103415A6 /* Pods_RantUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RantUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CFA39E2B05F0CF33B263EA /* Pods-RantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RantTests/Pods-RantTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E9CB61B715CCC56D73093DF /* Pods_RantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE0CD9E49B8069EA0C0923B /* Pods-RantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BACF70D43F3C32C17BF947D7 /* Pods-RantUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D751A7511DEA455500A339FE /* ISTimeline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISTimeline.framework; path = "Pods/../build/Debug-iphoneos/ISTimeline/ISTimeline.framework"; sourceTree = "<group>"; };
+		D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimelineEventViewController.swift; sourceTree = "<group>"; };
+		D751A7551DEB683600A339FE /* Timeline+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D751A7561DEB683600A339FE /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		D794E6011DE92719004928B7 /* AddSolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSolutionViewController.swift; sourceTree = "<group>"; };
+		D794E6031DE941D5004928B7 /* Solution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D794E6041DE941D5004928B7 /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
+		D794E6071DE95610004928B7 /* SolutionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionsTableViewController.swift; sourceTree = "<group>"; };
+		D794E6091DE95756004928B7 /* SolutionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionsTableViewCell.swift; sourceTree = "<group>"; };
+		D794E60B1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedSolutionViewController.swift; sourceTree = "<group>"; };
+		D794E60D1DEA3F3C004928B7 /* ISPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPoint.swift; sourceTree = "<group>"; };
+		D794E60E1DEA3F3C004928B7 /* ISTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISTimeline.swift; sourceTree = "<group>"; };
+		D7A42B911DCACEF800B556F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D7A42B921DCACEF800B556F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D7A42B951DCACF4B00B556F5 /* Rant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rant-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7A42B961DCACF4B00B556F5 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		D7A42B991DCAF2AC00B556F5 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		D7A42B9A1DCAF2AE00B556F5 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		D7A42B9D1DCAF2EC00B556F5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D7A42B9F1DCAF2F400B556F5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D7A42BA11DCAF2FF00B556F5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D7A42BB11DCAF64F00B556F5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D7A42BB31DCAF6C200B556F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D7A42BB71DCAFE0600B556F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7E555B31DCBF8D10020B0B3 /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
+		E743674D931424D92F8E8846 /* Pods-RantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RantTests/Pods-RantTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +176,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D751A7521DEA455500A339FE /* ISTimeline.framework in Frameworks */,
+				D7A42BB21DCAF64F00B556F5 /* libz.tbd in Frameworks */,
+				D7A42BA21DCAF2FF00B556F5 /* AddressBook.framework in Frameworks */,
+				D7A42BA01DCAF2F400B556F5 /* StoreKit.framework in Frameworks */,
+				D7A42B9E1DCAF2EC00B556F5 /* SystemConfiguration.framework in Frameworks */,
+				D7A42B941DCACEF800B556F5 /* FBSDKLoginKit.framework in Frameworks */,
+				D7A42BB41DCAF6C200B556F5 /* Bolts.framework in Frameworks */,
+				D7A42B9C1DCAF2AE00B556F5 /* GoogleSignIn.framework in Frameworks */,
+				D7A42B931DCACEF800B556F5 /* FBSDKCoreKit.framework in Frameworks */,
+				78D625FAFD3F09BFE114BB01 /* Pods_Rant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74403F55FD91579A0897FBA3 /* Pods_RantTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70273E8A2FB7E2E0FEA20B9 /* Pods_RantUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +211,16 @@
 		341034A61DB6E46000C57A19 = {
 			isa = PBXGroup;
 			children = (
+				D7A42BB11DCAF64F00B556F5 /* libz.tbd */,
+				D7A42BA11DCAF2FF00B556F5 /* AddressBook.framework */,
+				D7A42B9F1DCAF2F400B556F5 /* StoreKit.framework */,
+				D7A42B9D1DCAF2EC00B556F5 /* SystemConfiguration.framework */,
 				341034B11DB6E46000C57A19 /* Rant */,
 				341034C81DB6E46000C57A19 /* RantTests */,
 				341034D31DB6E46100C57A19 /* RantUITests */,
 				341034B01DB6E46000C57A19 /* Products */,
+				64E6F42B4567C0589D1986C1 /* Pods */,
+				B867EE732FC178F3C5BED756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +237,7 @@
 		341034B11DB6E46000C57A19 /* Rant */ = {
 			isa = PBXGroup;
 			children = (
+				D7A42BB71DCAFE0600B556F5 /* GoogleService-Info.plist */,
 				7F698C9E1DC99450008B8539 /* RantModels.xcdatamodeld */,
 				7FBF75EF1DC4313A0044AF6C /* CoreDataObjects */,
 				7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */,
@@ -167,16 +246,29 @@
 				341034E41DB6E5D800C57A19 /* HomeFeedTableViewController.swift */,
 				7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */,
 				34EBB2891DC2A22000516751 /* CommentTableViewCell.swift */,
+				D794E6091DE95756004928B7 /* SolutionsTableViewCell.swift */,
 				3410351B1DB845A800C57A19 /* TagCell.swift */,
+				D7A42BB31DCAF6C200B556F5 /* Bolts.framework */,
 				7FBF76071DC5CA560044AF6C /* ProfileViewController.swift */,
 				341034B21DB6E46000C57A19 /* AppDelegate.swift */,
+				D794E60D1DEA3F3C004928B7 /* ISPoint.swift */,
+				D794E60E1DEA3F3C004928B7 /* ISTimeline.swift */,
 				341034B81DB6E46000C57A19 /* Main.storyboard */,
+				D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */,
+				D794E60B1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift */,
+				D794E6071DE95610004928B7 /* SolutionsTableViewController.swift */,
+				D7A42B991DCAF2AC00B556F5 /* GoogleSignIn.bundle */,
+				D7A42B9A1DCAF2AE00B556F5 /* GoogleSignIn.framework */,
 				7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */,
+				D7E555B31DCBF8D10020B0B3 /* splashScreen.png */,
 				7FBF76031DC5C9730044AF6C /* ProfileNavigationController.swift */,
 				7FBF75F51DC447DA0044AF6C /* FavoritesTableViewController.swift */,
+				D7A42B911DCACEF800B556F5 /* FBSDKCoreKit.framework */,
+				D7A42B921DCACEF800B556F5 /* FBSDKLoginKit.framework */,
 				7FBF75FD1DC570480044AF6C /* FavoriteTableCell.swift */,
 				7FBF75F31DC447560044AF6C /* FavoritesNavigationController.swift */,
 				34EBB2971DC2AD6A00516751 /* AddCommentViewController.swift */,
+				D794E6011DE92719004928B7 /* AddSolutionViewController.swift */,
 				34EE65961DB9838400B1A76B /* SettingsViewController.swift */,
 				34EE65901DB9769900B1A76B /* HomeFeedNavigationController.swift */,
 				34EE658E1DB9755400B1A76B /* RantTabBarController.swift */,
@@ -191,6 +283,8 @@
 				341034BB1DB6E46000C57A19 /* Assets.xcassets */,
 				341034BD1DB6E46000C57A19 /* LaunchScreen.storyboard */,
 				341034C01DB6E46000C57A19 /* Info.plist */,
+				D7A42B961DCACF4B00B556F5 /* BridgingHeader.h */,
+				D7A42B951DCACF4B00B556F5 /* Rant-Bridging-Header.h */,
 			);
 			path = Rant;
 			sourceTree = "<group>";
@@ -213,17 +307,45 @@
 			path = RantUITests;
 			sourceTree = "<group>";
 		};
+		64E6F42B4567C0589D1986C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B61FB9A7CE20E750B89DD29 /* Pods-Rant.debug.xcconfig */,
+				6E8D7CF4CD05083C4B1C437F /* Pods-Rant.release.xcconfig */,
+				E743674D931424D92F8E8846 /* Pods-RantTests.debug.xcconfig */,
+				96CFA39E2B05F0CF33B263EA /* Pods-RantTests.release.xcconfig */,
+				BACF70D43F3C32C17BF947D7 /* Pods-RantUITests.debug.xcconfig */,
+				ACE0CD9E49B8069EA0C0923B /* Pods-RantUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7FBF75EF1DC4313A0044AF6C /* CoreDataObjects */ = {
 			isa = PBXGroup;
 			children = (
+				D794E6031DE941D5004928B7 /* Solution+CoreDataProperties.swift */,
+				D794E6041DE941D5004928B7 /* Solution.swift */,
 				7F698CA11DC995AC008B8539 /* Account+CoreDataProperties.swift */,
 				7F698CA21DC995AC008B8539 /* Rant+CoreDataProperties.swift */,
 				7F698CA31DC995AC008B8539 /* Comment+CoreDataProperties.swift */,
 				34EBB2A51DC2C6B600516751 /* Rant.swift */,
 				34EBB2A71DC2C6CF00516751 /* Comment.swift */,
 				7FBF75ED1DC425050044AF6C /* Account.swift */,
+				D751A7551DEB683600A339FE /* Timeline+CoreDataProperties.swift */,
+				D751A7561DEB683600A339FE /* Timeline.swift */,
 			);
 			name = CoreDataObjects;
+			sourceTree = "<group>";
+		};
+		B867EE732FC178F3C5BED756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D751A7511DEA455500A339FE /* ISTimeline.framework */,
+				8E65FC03096E4CD6AE6F8262 /* Pods_Rant.framework */,
+				9E9CB61B715CCC56D73093DF /* Pods_RantTests.framework */,
+				958CB48C062B2CB6103415A6 /* Pods_RantUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 341034D91DB6E46100C57A19 /* Build configuration list for PBXNativeTarget "Rant" */;
 			buildPhases = (
+				9F41A158306B67F23A8159FE /* [CP] Check Pods Manifest.lock */,
 				341034AB1DB6E46000C57A19 /* Sources */,
 				341034AC1DB6E46000C57A19 /* Frameworks */,
 				341034AD1DB6E46000C57A19 /* Resources */,
+				074DB85278D6152A530BE1C7 /* [CP] Embed Pods Frameworks */,
+				99F68052D84671E654D4B3FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,9 +375,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 341034DC1DB6E46100C57A19 /* Build configuration list for PBXNativeTarget "RantTests" */;
 			buildPhases = (
+				5D710E5D79DCAC79CED0521A /* [CP] Check Pods Manifest.lock */,
 				341034C11DB6E46000C57A19 /* Sources */,
 				341034C21DB6E46000C57A19 /* Frameworks */,
 				341034C31DB6E46000C57A19 /* Resources */,
+				E829D40B0EEB3D4A5F504F09 /* [CP] Embed Pods Frameworks */,
+				C201D9D4785DA1C577C21AA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,9 +396,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 341034DF1DB6E46100C57A19 /* Build configuration list for PBXNativeTarget "RantUITests" */;
 			buildPhases = (
+				421A25FFE342071610950286 /* [CP] Check Pods Manifest.lock */,
 				341034CC1DB6E46100C57A19 /* Sources */,
 				341034CD1DB6E46100C57A19 /* Frameworks */,
 				341034CE1DB6E46100C57A19 /* Resources */,
+				5B5C680B46F0795BCE55E7E5 /* [CP] Embed Pods Frameworks */,
+				C3C67F7132495ABBD4159D23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,7 +461,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E555B41DCBF8D10020B0B3 /* splashScreen.png in Resources */,
+				D7A42B9B1DCAF2AE00B556F5 /* GoogleSignIn.bundle in Resources */,
 				341034BF1DB6E46000C57A19 /* LaunchScreen.storyboard in Resources */,
+				D7A42BB81DCAFE0600B556F5 /* GoogleService-Info.plist in Resources */,
 				341034BC1DB6E46000C57A19 /* Assets.xcassets in Resources */,
 				341034BA1DB6E46000C57A19 /* Main.storyboard in Resources */,
 			);
@@ -352,6 +486,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		074DB85278D6152A530BE1C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rant/Pods-Rant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421A25FFE342071610950286 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B5C680B46F0795BCE55E7E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D710E5D79DCAC79CED0521A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99F68052D84671E654D4B3FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rant/Pods-Rant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F41A158306B67F23A8159FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C201D9D4785DA1C577C21AA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RantTests/Pods-RantTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C67F7132495ABBD4159D23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E829D40B0EEB3D4A5F504F09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RantTests/Pods-RantTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		341034AB1DB6E46000C57A19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -359,7 +631,10 @@
 			files = (
 				3410351E1DB850E200C57A19 /* TagAction.swift in Sources */,
 				7FBF76001DC5C7AA0044AF6C /* ProfileFeedCell.swift in Sources */,
+				D794E6101DEA3F3C004928B7 /* ISTimeline.swift in Sources */,
+				D794E60C1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift in Sources */,
 				7FBF75F61DC447DA0044AF6C /* FavoritesTableViewController.swift in Sources */,
+				D794E6081DE95610004928B7 /* SolutionsTableViewController.swift in Sources */,
 				341034F41DB831A000C57A19 /* CoreDataControls.swift in Sources */,
 				341034F21DB82A9200C57A19 /* ExpandedRantViewController.swift in Sources */,
 				34EBB2981DC2AD6A00516751 /* AddCommentViewController.swift in Sources */,
@@ -372,6 +647,7 @@
 				341034F01DB82A1E00C57A19 /* AddRantViewController.swift in Sources */,
 				341034E91DB6F23100C57A19 /* HomeFeedCell.swift in Sources */,
 				7FBF76081DC5CA560044AF6C /* ProfileViewController.swift in Sources */,
+				D751A7541DEA6ECC00A339FE /* AddTimelineEventViewController.swift in Sources */,
 				7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */,
 				7F698CA61DC995AC008B8539 /* Comment+CoreDataProperties.swift in Sources */,
 				7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */,
@@ -380,9 +656,14 @@
 				7F698CA01DC99450008B8539 /* RantModels.xcdatamodeld in Sources */,
 				7FBF75FE1DC570480044AF6C /* FavoriteTableCell.swift in Sources */,
 				34EBB2881DC2A20E00516751 /* CommentTableViewController.swift in Sources */,
+				D794E60A1DE95756004928B7 /* SolutionsTableViewCell.swift in Sources */,
 				7FBF75F41DC447560044AF6C /* FavoritesNavigationController.swift in Sources */,
 				7F698CA41DC995AC008B8539 /* Account+CoreDataProperties.swift in Sources */,
+				D751A7571DEB683600A339FE /* Timeline+CoreDataProperties.swift in Sources */,
 				7FBF76041DC5C9730044AF6C /* ProfileNavigationController.swift in Sources */,
+				D751A7581DEB683600A339FE /* Timeline.swift in Sources */,
+				D794E6061DE941D5004928B7 /* Solution.swift in Sources */,
+				D794E60F1DEA3F3C004928B7 /* ISPoint.swift in Sources */,
 				3410351C1DB845A800C57A19 /* TagCell.swift in Sources */,
 				341034B31DB6E46000C57A19 /* AppDelegate.swift in Sources */,
 				34EBB2A61DC2C6B600516751 /* Rant.swift in Sources */,
@@ -390,6 +671,8 @@
 				7FBF75EE1DC425050044AF6C /* Account.swift in Sources */,
 				341034E51DB6E5D800C57A19 /* HomeFeedTableViewController.swift in Sources */,
 				341035201DB877F100C57A19 /* LoginViewController.swift in Sources */,
+				D794E6051DE941D5004928B7 /* Solution+CoreDataProperties.swift in Sources */,
+				D794E6021DE92719004928B7 /* AddSolutionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,28 +814,50 @@
 		};
 		341034DA1DB6E46100C57A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B61FB9A7CE20E750B89DD29 /* Pods-Rant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rant",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ISTimeline",
+				);
 				INFOPLIST_FILE = Rant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = utcs.Rant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rant/Rant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		341034DB1DB6E46100C57A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8D7CF4CD05083C4B1C437F /* Pods-Rant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rant",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ISTimeline",
+				);
 				INFOPLIST_FILE = Rant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = utcs.Rant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rant/Rant-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		341034DD1DB6E46100C57A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E743674D931424D92F8E8846 /* Pods-RantTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RantTests/Info.plist;
@@ -565,6 +870,7 @@
 		};
 		341034DE1DB6E46100C57A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CFA39E2B05F0CF33B263EA /* Pods-RantTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RantTests/Info.plist;
@@ -577,6 +883,7 @@
 		};
 		341034E01DB6E46100C57A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACF70D43F3C32C17BF947D7 /* Pods-RantUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RantUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -588,6 +895,7 @@
 		};
 		341034E11DB6E46100C57A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE0CD9E49B8069EA0C0923B /* Pods-RantUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RantUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -1,0 +1,12 @@
+PODS:
+  - ISTimeline (0.0.5)
+
+DEPENDENCIES:
+  - ISTimeline (~> 0.0.5)
+
+SPEC CHECKSUMS:
+  ISTimeline: 0058d88639bb4e9ac53cae1bfea8a72985c4093a
+
+PODFILE CHECKSUM: 8611d775efa37ea9c647d874d5e0e1e1e0cc284d
+
+COCOAPODS: 1.1.1
