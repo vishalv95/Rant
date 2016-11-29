@@ -74,7 +74,7 @@ class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate 
             if solutions.count > 0 {
                 let solutions1 = solutionsArray[0]
                 guard let user1 = solutions1.account?.user! else { return }
-                guard let body1 = solutions1.body else { return }
+                guard let body1 = solutions1.title else { return }
                 sampleSolution1.text = "\(user1): \(body1)"
             }
             else{
@@ -84,7 +84,7 @@ class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate 
             if solutions.count > 1 {
                 let solutions2 = solutionsArray[1]
                 guard let user2 = solutions2.account?.user! else { return }
-                guard let body2 = solutions2.body else { return }
+                guard let body2 = solutions2.title else { return }
                 sampleSolution2.text = "\(user2): \(body2)"
             }
             else{
@@ -155,7 +155,7 @@ class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate 
             if solutions.count > 0 {
                 let solutions1 = solutionsArray[0]
                 guard let user1 = solutions1.account?.user! else { return }
-                guard let body1 = solutions1.body else { return }
+                guard let body1 = solutions1.title else { return }
                 sampleSolution1.text = "\(user1): \(body1)"
             }
             else{
@@ -165,7 +165,7 @@ class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate 
             if solutions.count > 1 {
                 let solutions2 = solutionsArray[1]
                 guard let user2 = solutions2.account?.user! else { return }
-                guard let body2 = solutions2.body else { return }
+                guard let body2 = solutions2.title else { return }
                 sampleSolution2.text = "\(user2): \(body2)"
             }
             else{

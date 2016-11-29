@@ -12,7 +12,7 @@ import ISTimeline
 class ExpandedSolutionViewController: UIViewController {
 
     @IBOutlet var timeline: ISTimeline!
-    var solution:Solution? = nil
+    var solution:Solution!
 
     
     override func viewDidLoad() {
