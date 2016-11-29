@@ -45,9 +45,9 @@ class SolutionsTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "expandSolutionSegue",
+        if segue.identifier == "solutionInfoSegue",
             let index = tableView.indexPathForSelectedRow?.row,
-            let esvc = segue.destinationViewController as? ExpandedSolutionViewController
+            let esvc = segue.destinationViewController as? SolutionInfoViewController
         {
             var solutionsArray:[Solution] = Array(rant!.solution!) as! [Solution]
             solutionsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })

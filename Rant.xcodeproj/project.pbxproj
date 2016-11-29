@@ -47,6 +47,7 @@
 		7FBF760A1DC5F0A50044AF6C /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF76091DC5F0A50044AF6C /* SettingsNavigationController.swift */; };
 		7FFC543F1DC66A4F00F98F0A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC543E1DC66A4F00F98F0A /* ProfileSettingsViewController.swift */; };
 		7FFC54421DC6729B00F98F0A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC54411DC6729B00F98F0A /* SettingsTableViewController.swift */; };
+		C267BB8C1DED2A2D002D9F75 /* SolutionInfoViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267BB8B1DED2A2D002D9F75 /* SolutionInfoViewcontroller.swift */; };
 		C70273E8A2FB7E2E0FEA20B9 /* Pods_RantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958CB48C062B2CB6103415A6 /* Pods_RantUITests.framework */; };
 		D751A7521DEA455500A339FE /* ISTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D751A7511DEA455500A339FE /* ISTimeline.framework */; };
 		D751A7541DEA6ECC00A339FE /* AddTimelineEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */; };
@@ -143,6 +144,7 @@
 		9E9CB61B715CCC56D73093DF /* Pods_RantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE0CD9E49B8069EA0C0923B /* Pods-RantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BACF70D43F3C32C17BF947D7 /* Pods-RantUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RantUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RantUITests/Pods-RantUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C267BB8B1DED2A2D002D9F75 /* SolutionInfoViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionInfoViewcontroller.swift; sourceTree = "<group>"; };
 		D751A7511DEA455500A339FE /* ISTimeline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISTimeline.framework; path = "Pods/../build/Debug-iphoneos/ISTimeline/ISTimeline.framework"; sourceTree = "<group>"; };
 		D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimelineEventViewController.swift; sourceTree = "<group>"; };
 		D751A7551DEB683600A339FE /* Timeline+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				D794E60D1DEA3F3C004928B7 /* ISPoint.swift */,
 				D794E60E1DEA3F3C004928B7 /* ISTimeline.swift */,
 				341034B81DB6E46000C57A19 /* Main.storyboard */,
+				C267BB8B1DED2A2D002D9F75 /* SolutionInfoViewcontroller.swift */,
 				D751A7531DEA6ECC00A339FE /* AddTimelineEventViewController.swift */,
 				D794E60B1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift */,
 				D794E6071DE95610004928B7 /* SolutionsTableViewController.swift */,
@@ -632,6 +635,7 @@
 				3410351E1DB850E200C57A19 /* TagAction.swift in Sources */,
 				7FBF76001DC5C7AA0044AF6C /* ProfileFeedCell.swift in Sources */,
 				D794E6101DEA3F3C004928B7 /* ISTimeline.swift in Sources */,
+				C267BB8C1DED2A2D002D9F75 /* SolutionInfoViewcontroller.swift in Sources */,
 				D794E60C1DEA3EDB004928B7 /* ExpandedSolutionViewController.swift in Sources */,
 				7FBF75F61DC447DA0044AF6C /* FavoritesTableViewController.swift in Sources */,
 				D794E6081DE95610004928B7 /* SolutionsTableViewController.swift in Sources */,

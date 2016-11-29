@@ -1,9 +1,9 @@
 //
 //  Solution.swift
-//  Rant
 //
-//  Created by Alana Layton on 11/25/16.
-//  Copyright © 2016 group4. All rights reserved.
+//
+//  Created by Timmy Gianitsos on 11/28/16.
+//
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import CoreData
 
 
 class Solution: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+    
+    // Insert code here to add functionality to your managed object subclass
+    
 }

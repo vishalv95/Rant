@@ -31,6 +31,11 @@
     </entity>
     <entity name="Solution" representedClassName=".Solution" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contributions" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contributors" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slogan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ts" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Account" inverseName="solution" inverseEntity="Account" syncable="YES"/>
         <relationship name="rant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Rant" inverseName="solution" inverseEntity="Rant" syncable="YES"/>
@@ -45,7 +50,7 @@
         <element name="Account" positionX="54" positionY="99" width="128" height="180"/>
         <element name="Comment" positionX="18" positionY="63" width="128" height="105"/>
         <element name="Rant" positionX="-27" positionY="18" width="128" height="195"/>
-        <element name="Solution" positionX="18" positionY="126" width="128" height="120"/>
+        <element name="Solution" positionX="18" positionY="126" width="128" height="195"/>
         <element name="Timeline" positionX="27" positionY="144" width="128" height="90"/>
     </elements>
 </model>
