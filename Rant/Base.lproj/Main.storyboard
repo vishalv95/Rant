@@ -377,7 +377,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCellIdentifier" rowHeight="67" id="St7-VA-1u1" customClass="CommentTableViewCell" customModule="Rant" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="67"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="St7-VA-1u1" id="tiM-cT-YVy">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="66.5"/>
@@ -443,7 +443,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="solutionCellIdentifier" rowHeight="72" id="Jm7-16-JWn" customClass="SolutionsTableViewCell" customModule="Rant" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="72"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jm7-16-JWn" id="RRk-O1-KSU">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
@@ -2154,6 +2154,24 @@
                                                     <rect key="frame" x="131" y="8" width="138" height="128"/>
                                                 </variation>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-i7-FVO">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="194" y="422" width="77" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wj-N2-zHY">
+                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="59" y="422" width="77" height="21"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2168,12 +2186,15 @@
                                                 <exclude reference="bPo-bq-WYR"/>
                                                 <exclude reference="4p4-Ob-Gkf"/>
                                                 <exclude reference="ggA-7z-muC"/>
+                                                <exclude reference="Th6-i7-FVO"/>
+                                                <exclude reference="2Wj-N2-zHY"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="gIc-Wy-9BN"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                                             <mask key="subviews">
                                                 <include reference="A86-NN-mUG"/>
                                                 <include reference="vCb-C4-OF8"/>
@@ -2182,6 +2203,8 @@
                                                 <include reference="bPo-bq-WYR"/>
                                                 <include reference="4p4-Ob-Gkf"/>
                                                 <include reference="ggA-7z-muC"/>
+                                                <include reference="Th6-i7-FVO"/>
+                                                <include reference="2Wj-N2-zHY"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="gIc-Wy-9BN"/>
@@ -2230,7 +2253,8 @@
                                         <exclude reference="kio-vl-WfH"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <mask key="subviews">
                                         <include reference="BiM-QY-qEN"/>
                                         <include reference="8FB-CB-bRo"/>
