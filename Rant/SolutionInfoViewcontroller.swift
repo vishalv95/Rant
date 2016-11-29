@@ -13,6 +13,7 @@ class SolutionInfoViewController: UIViewController {
     
     var solution: Solution!
     
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var sloganText: UITextView!
     @IBOutlet weak var summaryText: UITextView!
@@ -20,6 +21,9 @@ class SolutionInfoViewController: UIViewController {
     @IBOutlet weak var contributors: UILabel!
     
     override func viewDidAppear(animated: Bool) {
+        if let prof = solution.account?.profileImage {
+            profileImage.image = UIImage(data:prof,scale:1.0)
+        }
         titleText.text! = solution.title!
         sloganText.text! = solution.slogan!
         summaryText.text! = solution.summary!

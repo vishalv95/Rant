@@ -2092,26 +2092,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-QY-qEN">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU6-tr-Ig2">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="85" y="329" width="240" height="128"/>
-                                                </variation>
-                                            </textView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A86-NN-mUG">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_work" translatesAutoresizingMaskIntoConstraints="NO" id="A86-NN-mUG">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="85" y="552" width="59" height="49"/>
+                                                    <rect key="frame" x="68" y="374" width="59" height="49"/>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCb-C4-OF8">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lightbulb_outline" translatesAutoresizingMaskIntoConstraints="NO" id="vCb-C4-OF8">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="204" y="552" width="59" height="49"/>
+                                                    <rect key="frame" x="203" y="374" width="59" height="49"/>
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeT-hC-vJk">
@@ -2129,7 +2119,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="144" y="566" width="42" height="21"/>
+                                                    <rect key="frame" x="141" y="388" width="42" height="21"/>
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contributors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-AP-mAk">
@@ -2138,7 +2128,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="264" y="566" width="40" height="21"/>
+                                                    <rect key="frame" x="277" y="388" width="40" height="21"/>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAa-gE-3qY">
@@ -2147,7 +2137,7 @@
                                                     <color key="titleColor" red="0.15540067630000001" green="0.22268367180000001" blue="0.52122336920000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="150" y="658" width="100" height="30"/>
+                                                    <rect key="frame" x="150" y="448" width="100" height="30"/>
                                                 </variation>
                                                 <connections>
                                                     <segue destination="VrN-Pv-XXm" kind="show" identifier="timelineSegue" id="TYT-8p-eMt"/>
@@ -2160,7 +2150,6 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
-                                                <exclude reference="CU6-tr-Ig2"/>
                                                 <exclude reference="A86-NN-mUG"/>
                                                 <exclude reference="vCb-C4-OF8"/>
                                                 <exclude reference="XeT-hC-vJk"/>
@@ -2174,7 +2163,6 @@
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
-                                                <include reference="CU6-tr-Ig2"/>
                                                 <include reference="A86-NN-mUG"/>
                                                 <include reference="vCb-C4-OF8"/>
                                                 <include reference="XeT-hC-vJk"/>
@@ -2187,10 +2175,10 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-7z-muC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-7z-muC">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="80" y="8" width="240" height="128"/>
+                                            <rect key="frame" x="100" y="8" width="201" height="128"/>
                                         </variation>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FB-CB-bRo">
@@ -2200,7 +2188,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="80" y="183" width="240" height="128"/>
+                                            <rect key="frame" x="80" y="183" width="240" height="65"/>
+                                        </variation>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU6-tr-Ig2">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="80" y="271" width="240" height="67"/>
                                         </variation>
                                     </textView>
                                 </subviews>
@@ -2216,6 +2214,7 @@
                                         <exclude reference="BiM-QY-qEN"/>
                                         <exclude reference="ggA-7z-muC"/>
                                         <exclude reference="8FB-CB-bRo"/>
+                                        <exclude reference="CU6-tr-Ig2"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="C5W-WI-7Jw"/>
@@ -2230,6 +2229,7 @@
                                         <include reference="BiM-QY-qEN"/>
                                         <include reference="ggA-7z-muC"/>
                                         <include reference="8FB-CB-bRo"/>
+                                        <include reference="CU6-tr-Ig2"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="C5W-WI-7Jw"/>
@@ -2265,11 +2265,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="1200"/>
                     <connections>
                         <outlet property="contributions" destination="GQp-TM-nMc" id="05h-NC-aLe"/>
                         <outlet property="contributors" destination="12v-AP-mAk" id="eqg-dE-leF"/>
+                        <outlet property="profileImage" destination="ggA-7z-muC" id="xrB-Zs-dLS"/>
                         <outlet property="sloganText" destination="8FB-CB-bRo" id="Mtk-Th-3lY"/>
                         <outlet property="summaryText" destination="CU6-tr-Ig2" id="L79-VB-2Aw"/>
                         <outlet property="titleText" destination="XeT-hC-vJk" id="kk9-AA-jSB"/>
@@ -2299,9 +2298,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="ZeR-hd-3FZ"/>
         <segue reference="ahE-ON-Uu5"/>
+        <segue reference="AvA-aB-SsH"/>
         <segue reference="2OY-d8-vBX"/>
         <segue reference="0Wv-U9-lcq"/>
-        <segue reference="JLf-py-dPf"/>
         <segue reference="Xkb-T0-Qjb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
