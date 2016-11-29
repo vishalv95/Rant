@@ -67,13 +67,15 @@
 		<string>fbauth</string>
 		<string>fbauth2</string>
 		<string>fb-messenger-api20140430</string>
-        <string>utcs.rant</string>
-        <string>com.googleusercontent.apps.729261000931-plorrjmkj2k4l87904jj9gutg6dje4b0</string>
+		<string>utcs.rant</string>
+		<string>com.googleusercontent.apps.729261000931-plorrjmkj2k4l87904jj9gutg6dje4b0</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>akamaihd.net</key>

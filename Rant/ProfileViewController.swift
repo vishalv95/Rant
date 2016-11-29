@@ -35,13 +35,21 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         profileTableView.delegate = self
         profileTableView.dataSource = self
+        
+        if let prof = account?.profileImage {
+            profileImage.image = UIImage(data:prof,scale:1.0)
+        }
+        usernameLabel.text = account?.user
+        account = retrieveThisAccount()
+        profileTableView.reloadData()
+        badgeRender()
     }
     
     override func viewWillAppear(animated: Bool) {
         if let prof = account?.profileImage {
             profileImage.image = UIImage(data:prof,scale:1.0)
         }
-        usernameLabel.text = account!.user
+        usernameLabel.text = account?.user
         account = retrieveThisAccount()
         profileTableView.reloadData()
         badgeRender()
