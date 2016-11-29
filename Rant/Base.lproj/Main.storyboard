@@ -2113,24 +2113,6 @@
                                                     <rect key="frame" x="131" y="152" width="138" height="21"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contributions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQp-TM-nMc">
-                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="141" y="388" width="42" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contributors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-AP-mAk">
-                                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="277" y="388" width="40" height="21"/>
-                                                </variation>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAa-gE-3qY">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <state key="normal" title="Show Timeline">
@@ -2143,6 +2125,28 @@
                                                     <segue destination="VrN-Pv-XXm" kind="show" identifier="timelineSegue" id="TYT-8p-eMt"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-bq-WYR">
+                                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="131" y="384" width="59" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="contributions:forEvent:" destination="NQ4-bq-mTi" eventType="editingDidEnd" id="hkS-lp-Bsy"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4p4-Ob-Gkf">
+                                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="262" y="384" width="59" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="contributors:forEvent:" destination="NQ4-bq-mTi" eventType="editingDidEnd" id="09d-S7-fc9"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2153,9 +2157,9 @@
                                                 <exclude reference="A86-NN-mUG"/>
                                                 <exclude reference="vCb-C4-OF8"/>
                                                 <exclude reference="XeT-hC-vJk"/>
-                                                <exclude reference="GQp-TM-nMc"/>
-                                                <exclude reference="12v-AP-mAk"/>
                                                 <exclude reference="CAa-gE-3qY"/>
+                                                <exclude reference="bPo-bq-WYR"/>
+                                                <exclude reference="4p4-Ob-Gkf"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="gIc-Wy-9BN"/>
@@ -2166,9 +2170,9 @@
                                                 <include reference="A86-NN-mUG"/>
                                                 <include reference="vCb-C4-OF8"/>
                                                 <include reference="XeT-hC-vJk"/>
-                                                <include reference="GQp-TM-nMc"/>
-                                                <include reference="12v-AP-mAk"/>
                                                 <include reference="CAa-gE-3qY"/>
+                                                <include reference="bPo-bq-WYR"/>
+                                                <include reference="4p4-Ob-Gkf"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="gIc-Wy-9BN"/>
@@ -2266,8 +2270,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="contributions" destination="GQp-TM-nMc" id="05h-NC-aLe"/>
-                        <outlet property="contributors" destination="12v-AP-mAk" id="eqg-dE-leF"/>
+                        <outlet property="contributions" destination="bPo-bq-WYR" id="Kxu-2h-QoM"/>
+                        <outlet property="contributors" destination="4p4-Ob-Gkf" id="fDa-Jb-TG5"/>
                         <outlet property="profileImage" destination="ggA-7z-muC" id="xrB-Zs-dLS"/>
                         <outlet property="sloganText" destination="8FB-CB-bRo" id="Mtk-Th-3lY"/>
                         <outlet property="summaryText" destination="CU6-tr-Ig2" id="L79-VB-2Aw"/>
@@ -2297,7 +2301,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZeR-hd-3FZ"/>
-        <segue reference="ahE-ON-Uu5"/>
+        <segue reference="rOG-FE-IUo"/>
         <segue reference="AvA-aB-SsH"/>
         <segue reference="2OY-d8-vBX"/>
         <segue reference="0Wv-U9-lcq"/>

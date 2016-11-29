@@ -39,7 +39,7 @@ class SolutionsTableViewController: UITableViewController {
         
         let acc = solutionsArray[indexPath.row].valueForKey("account") as? Account
         solutionCell.usernameLabel?.text = acc!.user
-        solutionCell.bodyTextField?.text = solutionsArray[indexPath.row].valueForKey("body") as? String
+        solutionCell.bodyTextField?.text = solutionsArray[indexPath.row].valueForKey("title") as? String
         return solutionCell
     }
     
