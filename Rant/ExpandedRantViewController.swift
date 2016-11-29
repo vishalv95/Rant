@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class ExpandedRantViewController: UIViewController {
+class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -26,6 +26,8 @@ class ExpandedRantViewController: UIViewController {
     var rant:Rant? = nil
     
     override func viewDidAppear(animated: Bool) {
+        
+        
         titleLabel.text = rant!.valueForKey("title") as? String
         bodyLabel.text = rant!.valueForKey("body") as? String
         let acc = rant!.valueForKey("account") as? Account
@@ -96,8 +98,19 @@ class ExpandedRantViewController: UIViewController {
 
     }
     
+    func usernameLabelPressed(gr:UITapGestureRecognizer) {
+        print("am i being tapped")
+        self.performSegueWithIdentifier("otherUserProfileSegue", sender: self)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.userInteractionEnabled = true
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target:self, action: "usernameLabelPressed:")
+        usernameLabel.addGestureRecognizer(tap)
+        tap.delegate = self
+
         titleLabel.text = rant!.valueForKey("title") as? String
         bodyLabel.text = rant!.valueForKey("body") as? String
         let acc = rant!.valueForKey("account") as? Account
@@ -284,7 +297,11 @@ class ExpandedRantViewController: UIViewController {
         }
         
         
-        
+        if segue.identifier == "otherUserProfileSegue",
+            let opvc = segue.destinationViewController as? ProfileViewController{
+                opvc.usernameFromRant = usernameLabel.text
+        }
+
         
     }
  
