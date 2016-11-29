@@ -157,6 +157,16 @@ func retrieveRantsForThisUser() -> [Rant] {
         return [Rant]()
     }
 }
+func retrieveRantsForAnyUser(username:String) -> [Rant] {
+        let account = retrieveAccountForUser(username) as! Account
+        
+        var rantsArray:[Rant] = Array(account.rant!) as! [Rant]
+        rantsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
+    
+        return rantsArray
+}
+
+
 func retrieveThisAccount() -> Account? {
     let defaults = NSUserDefaults.standardUserDefaults()
     if let username = defaults.objectForKey("username") as? String{

@@ -147,6 +147,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTk-1Q-TKQ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -360,6 +363,7 @@
                         <segue destination="tGH-Tk-6t0" kind="presentation" identifier="addCommentSegue" id="r90-fs-L2K"/>
                         <segue destination="P4G-Nv-sYW" kind="presentation" identifier="editRantSegue" id="rOG-FE-IUo"/>
                         <segue destination="S4h-9o-bOw" kind="presentation" identifier="addSolutionSegue" id="xtX-4g-64j"/>
+                        <segue destination="M7I-KD-3xm" kind="show" identifier="otherUserProfileSegue" id="XCI-4o-jyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aV-bM-it2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2076,6 +2080,7 @@
         <segue reference="oAl-VU-gXQ"/>
         <segue reference="2OY-d8-vBX"/>
         <segue reference="rsy-ww-Wp0"/>
+        <segue reference="XCI-4o-jyO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

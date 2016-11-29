@@ -30,17 +30,28 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     var rants = retrieveRantsForThisUser()
     let imagePicker = UIImagePickerController()
     var account:Account? = retrieveThisAccount()
+    var usernameFromRant:String? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         profileTableView.delegate = self
         profileTableView.dataSource = self
         
+        if usernameFromRant != nil {
+            account = retrieveAccountForUser(usernameFromRant!) as? Account
+            rants = retrieveRantsForAnyUser(usernameFromRant!)
+        } else {
+            account = retrieveThisAccount()
+            rants = retrieveRantsForThisUser()
+        }
+
         if let prof = account?.profileImage {
             profileImage.image = UIImage(data:prof,scale:1.0)
         }
         usernameLabel.text = account?.user
-        account = retrieveThisAccount()
+        
         profileTableView.reloadData()
         badgeRender()
     }
