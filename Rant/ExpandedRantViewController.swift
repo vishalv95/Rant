@@ -99,9 +99,7 @@ class ExpandedRantViewController: UIViewController, UIGestureRecognizerDelegate 
     }
     
     func usernameLabelPressed(gr:UITapGestureRecognizer) {
-        print("am i being tapped")
         self.performSegueWithIdentifier("otherUserProfileSegue", sender: self)
-
     }
     
     override func viewDidLoad() {

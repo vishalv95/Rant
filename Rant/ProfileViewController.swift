@@ -68,7 +68,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func badgeRender(){
-//        TODO: Badges not appearing after threshold is met
         if account?.rant?.count < 5{
             badge1.hidden = true
         }
@@ -95,19 +94,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             badge3.hidden = false
         }
 
-//        if account?.solution?.count < 5{
+        if account?.solution?.count < 5{
             badge4.hidden = true
-//        }
-        
-//        else{
-//            badge4.hidden = false
-//        }
+        }
+        else{
+            badge4.hidden = false
+        }
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
