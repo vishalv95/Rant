@@ -50,7 +50,11 @@ func retrieveRants() -> [Rant] {
     do {
         try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
         var rants = fetchedResults as! [Rant]
-        rants.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
+        for rant in rants {
+            let hours = Double(NSDate().timeIntervalSinceDate(rant.ts!) / 3600)
+            rant.score = Int(round(Double((rant.upvotes?.integerValue)! - (rant.downvotes?.integerValue)!) * max(0.5, 1 - (0.05 * hours))))
+        }        
+        rants.sortInPlace({$0.score!.integerValue > $1.score!.integerValue})
         return rants
     } catch {
         // If an error occurs

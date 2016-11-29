@@ -13,15 +13,14 @@ import Foundation
 import CoreData
 
 extension Rant {
-
     @NSManaged var body: String?
     @NSManaged var downvotes: NSNumber?
     @NSManaged var tags: String?
     @NSManaged var title: String?
     @NSManaged var ts: NSDate?
     @NSManaged var upvotes: NSNumber?
+    @NSManaged var score: NSNumber?
     @NSManaged var account: Account?
     @NSManaged var comment: NSSet?
     @NSManaged var solution: NSSet?
-
 }

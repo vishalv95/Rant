@@ -31,18 +31,10 @@ class ExpandedRantViewController: UIViewController {
         let acc = rant!.valueForKey("account") as? Account
         usernameLabel.text = acc!.user
         
-        if let upvotes = rant!.valueForKey("upvotes"){
-            if let downvotes = rant!.valueForKey("downvotes"){
-                let score = (upvotes as! Int) - (downvotes as! Int)
-                scoreLabel.text = "\(score)"
-            }
-            else{
-                scoreLabel.text = "0"
-            }
+        if let score = rant!.valueForKey("score"){
+            scoreLabel.text = "\(score)"
         }
-        else{
-            scoreLabel.text = "0"
-        }
+        
         if let comments = rant!.comment {
             var commentsArray:[Comment] = Array(comments) as! [Comment]
             commentsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
@@ -111,18 +103,10 @@ class ExpandedRantViewController: UIViewController {
         let acc = rant!.valueForKey("account") as? Account
         usernameLabel.text = acc!.user
         
-        if let upvotes = rant!.valueForKey("upvotes"){
-            if let downvotes = rant!.valueForKey("downvotes"){
-                let score = (upvotes as! Int) - (downvotes as! Int)
-                scoreLabel.text = "\(score)"
-            }
-            else{
-                scoreLabel.text = "0"
-            }
+        if let score = rant!.valueForKey("score"){
+            scoreLabel.text = "\(score)"
         }
-        else{
-            scoreLabel.text = "0"
-        }
+        
         if let comments = rant!.comment {
             var commentsArray:[Comment] = Array(comments) as! [Comment]
             commentsArray.sortInPlace({$0.ts!.compare($1.ts!) == NSComparisonResult.OrderedAscending })
