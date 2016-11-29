@@ -34,18 +34,10 @@ class FavoritesTableViewController: UITableViewController {
         let acc = rants[indexPath.row].valueForKey("account") as? Account
         cell.usernameLabel?.text = acc?.user!
         
-        if let upvotes = rants[indexPath.row].valueForKey("upvotes"){
-            if let downvotes = rants[indexPath.row].valueForKey("downvotes"){
-                let score = (upvotes as! Int) - (downvotes as! Int)
-                cell.scoreLabel?.text = "\(score)"
-            }
-            else{
-                cell.scoreLabel?.text = "0"
-            }
+        if let score = rants[indexPath.row].valueForKey("score"){
+            cell.scoreLabel?.text = "\(score)"
         }
-        else{
-            cell.scoreLabel?.text = "0"
-        }
+        
         return cell
     }
     
