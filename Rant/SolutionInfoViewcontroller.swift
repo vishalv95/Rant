@@ -88,6 +88,18 @@ class SolutionInfoViewController: UIViewController {
         contributors.text! = String(solution.contributors!)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let prof = solution.account?.profileImage {
+            profileImage.image = UIImage(data:prof,scale:1.0)
+        }
+        titleText.text! = solution.title!
+        sloganText.text! = solution.slogan!
+        summaryText.text! = solution.summary!
+        contributions.text! = String(solution.contributions!)
+        contributors.text! = String(solution.contributors!)
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

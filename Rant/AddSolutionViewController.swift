@@ -85,12 +85,28 @@ class AddSolutionViewController: UIViewController, UITextViewDelegate {
         let entity =  NSEntityDescription.entityForName("Solution", inManagedObjectContext: managedContext)
         let solution = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
         
+        let ts = NSDate()
+        
         // Set the attribute values
         solution.setValue(title, forKey: "title")
         solution.setValue(slogan, forKey: "slogan")
         solution.setValue(summary, forKey: "summary")
         solution.setValue(account, forKey: "account")
         solution.setValue(self.rant, forKey: "rant")
+        solution.setValue(ts, forKey: "ts")
+        
+        //create initial timeline
+        let ent =  NSEntityDescription.entityForName("Timeline", inManagedObjectContext: managedContext)
+        let timeline = NSManagedObject(entity: ent!, insertIntoManagedObjectContext:managedContext)
+        
+        
+        // Set the initial timeline attribute values
+        timeline.setValue("New Solution", forKey: "body")
+        timeline.setValue(ts, forKey: "ts")
+        
+        // Add initial timeline to solution
+        let solutionTimeline = solution.mutableSetValueForKey("timeline")
+        solutionTimeline.addObject(timeline)
         
         // Add solution to the rant
         var solutions = rant.mutableSetValueForKey("solution")
